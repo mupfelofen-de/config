@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: rec
+# key: rec
+# --
+data $1 ${2: }=
+    $1 {
+      $0
+    }

@@ -1,0 +1,31 @@
+#! /usr/bin/env zsh
+
+setopt err_exit
+
+TIMEFMT=$'\n'
+TIMEFMT+=$'real: %*E\n'
+TIMEFMT+=$'user: %*U\n'
+TIMEFMT+=$'krnl: %*S\n'
+TIMEFMT+=$'cpu%%: %P\n'
+TIMEFMT+=$'mem:  %Mm\n'
+
+outfile="`mktemp`"
+resfile="`mktemp`"
+trap "rm -f $outfile $resfile" HUP INT EXIT
+
+(time (nice -n19 -- ionice -c3 -- $* ||
+           echo "$?" >> $resfile)) &>> $outfile
+
+res="`cat $resfile`";
+if [[ -z $res ]]; then
+    subj="Success"
+else
+    subj="Error $res"
+fi
+
+sendmail -F "ertes jobs" $USER <<EOF
+Content-type: text/plain; charset=UTF-8
+Subject: $subj for $USER@$HOST: `tr '[:cntrl:]' ' ' <<< "$*" | tr -s ' '`
+
+`cat $outfile`
+EOF

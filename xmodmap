@@ -1,0 +1,81 @@
+! -*-conf-*-
+
+
+! Modifiers
+keycode 108 = Mode_switch
+
+
+! 1 2 3
+keycode 49 = U005E U00B0 U2191 U2193
+keycode 10 =     1 U0021
+keycode 11 =     2 U0022 U00B2 U2039
+keycode 12 =     3 U2211 U00B3 U203A
+keycode 13 =     4 U0024 U00AB U00BB
+keycode 14 =     5 U0025 U2013 U2014
+keycode 15 =     6 U0026 U2190 U2192
+keycode 16 =     7 U002F U007B U2208
+keycode 17 =     8 U0028 U005B U2209
+keycode 18 =     9 U0029 U005D U2211
+keycode 19 =     0 U003D U007D U2260
+keycode 20 = U00DF U003F U005C U220F
+keycode 21 = U2261 U0060 U2262
+
+! Q W E
+keycode 24 =     q     Q U0040 U211A
+keycode 25 =     w     W
+keycode 26 =     e     E U2203 U20AC
+keycode 27 =     r     R U211C U211D
+keycode 28 =     t     T U03D5
+keycode 29 =     z     Z U2124
+keycode 30 =     u     U U221E
+keycode 31 =     i     I U2243 U222B
+keycode 32 =     o     O o     U2228
+keycode 33 =     p     P U03C0 U03C8
+keycode 34 = U00FC U00DC
+keycode 35 = U002B U002A U007E U2248
+
+! A S D
+keycode 38 =     a     A U2200 U2227
+keycode 39 =     s     S U2286 U2288
+keycode 40 =     d     D U22C4 U2202
+keycode 41 =     f     F U2218
+keycode 42 =     g     G U2265
+keycode 43 =     h     H U2665 U210F
+keycode 44 =     j     J
+keycode 45 =     k     K
+keycode 46 =     l     L U03BB U2264
+keycode 47 = U00F6 U00D6 U007B
+keycode 48 = U00E4 U00C4 U007D
+keycode 51 = U0023 U0027 U221A
+
+! Y X C
+keycode 94 = U003C U003E U007C U21D0
+keycode 52 =     y     Y
+keycode 53 =     x     X U00D7
+keycode 54 =     c     C U00A2 U2102
+keycode 55 =     v     V
+keycode 56 =     b     B U22A5
+keycode 57 =     n     N U00AC U2115
+keycode 58 =     m     M U00B7 U00B5
+keycode 59 = U002C U003B U002F U2014
+keycode 60 = U002E U003A U2026
+keycode 61 = U002D U005F U00AD U2013
+
+! Numpad
+keycode 91 = Delete U002E
+
+! Others
+!keycode 174 = XF86AudioLowerVolume
+!keycode 176 = XF86AudioRaiseVolume
+!keycode 160 = XF86AudioMute
+
+! Host/state-specific
+#ifdef DEIMOS_HOME
+keycode 119 = Delete
+keycode 135 = Next
+#endif
+
+#ifdef DEIMOS_MOBILE
+keycode 119 = Delete
+keycode 135 = Delete
+#endif

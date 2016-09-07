@@ -1,0 +1,52 @@
+! -*-conf-xdefaults-*-
+
+
+!== Cursors ==!
+
+Xcursor.theme: Oxygen_Black
+
+
+!== Fonts ==!
+
+Xft.antialias: true
+Xft.dpi:       80
+Xft.hinting:   true
+Xft.hintstyle: hintfull
+
+
+!== Terminals ==!
+
+URxvt.font:           xft:DejaVu Sans Mono:pixelsize=15,-misc-fixed-bold-r-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
+URxvt.boldFont:       xft:DejaVu Sans Mono:pixelsize=15:bold,-misc-fixed-bold-r-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
+URxvt.italicFont:     xft:DejaVu Sans Mono:pixelsize=15:italic,-misc-fixed-bold-i-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-i-normal--15-140-75-75-c-90-iso10646-1
+URxvt.boldItalicFont: xft:DejaVu Sans Mono:pixelsize=15:italic,-misc-fixed-bold-i-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-i-normal--15-140-75-75-c-90-iso10646-1
+
+URxvt.keysym.M-C-1: command:\033]710;xft:DejaVu Sans Mono:pixelsize=12\007\033]711;xft:DejaVu Sans Mono:pixelsize=12:bold\007
+URxvt.keysym.M-C-2: command:\033]710;xft:DejaVu Sans Mono:pixelsize=15\007\033]711;xft:DejaVu Sans Mono:pixelsize=15:bold\007
+URxvt.keysym.M-C-3: command:\033]710;xft:DejaVu Sans Mono:pixelsize=21\007\033]711;xft:DejaVu Sans Mono:pixelsize=21:bold\007
+
+! behaviour
+URxvt.cutchars:         "`\"\'&()*,;@<=>?[]{|}"
+URxvt.jumpScroll:       true
+URxvt.print-pipe:       cat > $(mktemp --tmpdir=~/tmp/dump XXXXXXXX)
+URxvt.saveLines:        16384
+URxvt.tripleclickwords: true
+
+! scrollbar
+URxvt.scrollBar_right:   true
+URxvt.scrollColor:       #FF8000
+URxvt.scrollstyle:       plain
+URxvt.scrollTtyKeypress: true
+URxvt.scrollTtyOutput:   false
+URxvt.scrollWithBuffer:  true
+
+! colors
+URxvt.depth:         32
+URxvt.background:    [80]#000000
+URxvt.foreground:    #FFC080
+URxvt.colorBD:       #FFE0D0
+URxvt.cursorColor:   #C00000
+URxvt.cursorColor2:  #FF8000
+URxvt.transparent:   false
+URxvt.pointerColor:  #FFFF00
+URxvt.pointerColor2: #600000

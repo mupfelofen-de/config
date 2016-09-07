@@ -1,0 +1,9 @@
+alang=en,eng,de,deu,ger
+ao=pulse
+audio-display=no
+audio-channels=2
+autofit=50%
+cache-default=32768
+no-ytdl
+vo=opengl
+ytdl-format=best,best

@@ -1,0 +1,20 @@
+name:          mytaffybar
+version:       0.1.0
+category:      System
+synopsis:      Taffybar configuration
+maintainer:    Ertugrul Söylemez <esz@posteo.de>
+author:        Ertugrul Söylemez <esz@posteo.de>
+copyright:     (c) 2016 Ertugrul Söylemez
+build-type:    Simple
+cabal-version: >= 1.10
+description:
+    This package contains my Taffybar configuration.
+
+executable mytaffybar
+    build-depends:
+        base >= 4.5 && < 5,
+        taffybar
+    default-language: Haskell2010
+    default-extensions:
+    ghc-options: -W -threaded
+    main-is: Main.hs

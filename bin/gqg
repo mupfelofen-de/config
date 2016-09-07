@@ -1,0 +1,9 @@
+#! /usr/bin/env zsh
+
+if [[ -z $* ]]; then
+    geeqie &> /dev/null &
+else
+    for n in $*; do
+        geeqie $n &> /dev/null &
+    done
+fi

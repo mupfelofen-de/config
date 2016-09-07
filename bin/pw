@@ -1,0 +1,83 @@
+#! /usr/bin/env zsh
+
+setopt err_exit
+setopt no_clobber
+
+
+putHelp() {
+    echo "Usage:" 1>&2
+    echo "  pw                  List all entries." 1>&2
+    echo "  pw add FILE         Add the given entry read from stdin." 1>&2
+    echo "  pw get FILES        Read the given passwords." 1>&2
+    echo "  pw help             This message." 1>&2
+    echo "  pw ls [PATTERNS]    List entries." 1>&2
+    echo "  pw pull             Pull from remote repository." 1>&2
+    echo "  pw push             Push to remote repository." 1>&2
+    echo "  pw rm FILES         Remove the given entries." 1>&2
+    echo "  pw verify           Verify authenticity of all passwords." 1>&2
+    echo "  pw COMMAND          Run shell command inside password repo." 1>&2
+}
+
+
+cd ~/cfg/pw
+
+pwMode=$1;
+shift &> /dev/null || (ls -C1 **/*.asc(.) && exit 0)
+
+case $pwMode in
+
+    add)
+        fp=$1; shift &> /dev/null || (putHelp; exit 1)
+        asc="$fp".asc
+
+        mkdir -p "`dirname $fp`"
+        cat > "$fp"
+        gpg -aeis -R pass -o "$asc" "$fp"
+        rm -f "$fp"
+
+        darcs add -q "$asc"
+        darcs record -alqm "add: $asc" "$asc" > /dev/null
+        ;;
+
+    get)
+        for n in ${~*}; do
+            gpg < $n 2> /dev/null
+        done
+        ;;
+
+    help)
+        putHelp
+        ;;
+
+    ls)
+        eval "ls -lh --color=always --group-directories-first --hide=_darcs $*"
+        ;;
+
+    rm)
+        for n in ${~*}; do
+            rm -i $n
+            [[ $n == */* ]] && rmdir --ignore-fail-on-non-empty -p "`dirname $n`"
+            darcs record -alqm "rm: $n" $n > /dev/null
+        done
+        ;;
+
+    pull)
+        darcs pull -a
+        gpg --verify-files **/*.asc(.)
+        ;;
+
+    push)
+        darcs push -a
+        ;;
+
+    verify)
+        files=(**/*.asc(.))
+        echo "Verifying:" $files 2>&1
+        gpg --verify-files $files
+        ;;
+
+    *)
+        eval "$pwMode $*"
+        ;;
+
+esac

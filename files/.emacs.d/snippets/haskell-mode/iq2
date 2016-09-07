@@ -1,0 +1,5 @@
+# key: iq2
+# name: iq2
+# --
+import qualified $1 as $2
+import $1 ($0)

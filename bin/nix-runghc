@@ -1,0 +1,11 @@
+#! /usr/bin/env zsh
+
+setopt err_exit
+setopt null_glob
+
+args=()
+for n in $*; do
+    args+=(${(q)n})
+done
+
+exec nix-shell -Q --command "exec runghc -iexamples -iprograms -isrc -itest -itests -outputdir=ghci-tmp $args"

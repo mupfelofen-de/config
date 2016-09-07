@@ -1,0 +1,14 @@
+# key: mod
+# name: mod
+# --
+-- |
+-- Copyright:  (c) 2016 Ertugrul Söylemez
+-- License:    BSD3
+-- Maintainer: Ertugrul Söylemez <esz@posteo.de>
+-- Stability:  experimental
+
+module $1${2:
+    ( $0
+    )
+   } where
+

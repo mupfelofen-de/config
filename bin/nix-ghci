@@ -1,0 +1,28 @@
+#! /usr/bin/env zsh
+
+setopt err_exit
+setopt null_glob
+
+cabal_file=(*.cabal)
+if (( ${#cabal_file} < 1 )); then
+    unset cabal_file
+    rm -rf ghci-tmp
+    exec ghci $*
+fi
+
+if ! [[ -f reflex.cabal ]]; then
+    cabal2nix ./. > default.nix
+fi
+cabal2nix -fdevel -fexamples -ftestprogram --shell ./. > shell.nix
+
+args=()
+for n in $*; do
+    args+=(${(q)n})
+done
+
+rm -rf ghci-tmp
+if [[ -f .want-ghcjs ]]; then
+    exec nix-shell -Q --argstr compiler ghcjs --command "exec ghcjs --interactive $args"
+else
+    exec nix-shell -Q --command "exec ghci $args"
+fi

@@ -1,0 +1,5 @@
+color background = none
+enable-colors = yes
+list-format = [[%artist% - %title%]|[%title%]|%shortfile%]
+seek-time = 5
+set-xterm-title = no

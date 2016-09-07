@@ -1,0 +1,16 @@
+# key: mod
+# name: mod
+# --
+
+#+TITLE: $1
+#+AUTHOR: Ertugrul Söylemez
+#+EMAIL: esz@posteo.de
+#+LANGUAGE: de
+
+#+OPTIONS: ':t -:t tags:nil toc:nil todo:nil
+#+STARTUP: content
+#+TODO: TODO(t) REVISE(r@) | DONE(d!)
+
+#+LATEX_CLASS: textonly
+#+LATEX_HEADER_EXTRA: \usepackage[ngerman]{babel}
+

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: src
+# key: src
+# --
+#+BEGIN_src ${1:haskell}
+$0
+#+END_src
