@@ -7,7 +7,7 @@ inst_file() {
     for n in $*; do
         if [[ -d $n ]]; then
             if [[ -f $n/.linkdir ]]; then
-                ln -sf `pwd`/$n ~/$n
+                ln -fns `pwd`/$n ~/$n
             else
                 mkdir -p ~/$n
                 inst_file $n/{,.}*
@@ -15,7 +15,7 @@ inst_file() {
             continue
         fi
         if [[ -f $n ]]; then
-            ln -sf `pwd`/$n ~/$n
+            ln -fns `pwd`/$n ~/$n
             continue
         fi
         echo "Skipping special file: files/$n" >&2
