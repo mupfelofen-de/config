@@ -339,6 +339,12 @@ Erstellt: %U" :prepend t))))
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 136 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
+ '(agda2-highlight-datatype-face ((t (:foreground "cyan"))))
+ '(agda2-highlight-function-face ((t (:foreground "cyan"))))
+ '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
+ '(agda2-highlight-primitive-face ((t (:foreground "cyan"))))
+ '(agda2-highlight-primitive-type-face ((t (:foreground "cyan"))))
+ '(agda2-highlight-record-face ((t (:foreground "cyan"))))
  '(erc-current-nick-face ((t (:foreground "#4b7" :weight bold))))
  '(erc-input-face ((t (:foreground "#cc5"))))
  '(erc-my-nick-face ((t (:foreground "#cc5" :weight bold))))
@@ -360,7 +366,7 @@ Erstellt: %U" :prepend t))))
       (set-frame-parameter nil 'alpha 85)
     (set-frame-parameter nil 'alpha 100)))
 
-(add-hook 'agda2-mode-hook 'ertes-invert-colours)
+(add-hook 'find-file-hook 'capitalized-words-mode)
 
 (add-to-list 'auto-mode-alist '("\.html$" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\.md$" . text-mode))
