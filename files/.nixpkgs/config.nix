@@ -42,8 +42,10 @@ nixos : {
                 emacs
                 emacsPackages.darcsum
                 # emacsPackagesNg.bbdb
+                emacsPackagesNg.geiser
                 emacsPackagesNg.haskell-mode
                 emacsPackagesNg.magit
+                emacsPackagesNg.markdown-mode
                 emacsPackagesNg.org
                 emacsPackagesNg.paredit
                 emacsPackagesNg.speck
@@ -72,7 +74,7 @@ nixos : {
                 nmap
                 notmuch
                 p7zip
-                pari
+                # pari-unstable
                 psmisc
                 pv
                 pwgen
@@ -100,7 +102,6 @@ nixos : {
                 ghostscript
                 gnuplot
                 graphviz
-                haskell.packages.ghc7103.hasktags
                 maxima
                 pandoc
                 pdftk
@@ -143,6 +144,7 @@ nixos : {
                 scrot
                 syncthing
                 torbrowser
+                transmission
                 unclutter
                 xclip
                 xlibs.xbacklight
@@ -152,7 +154,6 @@ nixos : {
                 xscreensaver
                 youtube-dl
                 zathura
-                zathuraCollection.zathura_pdf_poppler
             ];
         };
 
@@ -167,6 +168,9 @@ nixos : {
             criterion
             fingertree
             free
+            generic-deriving
+            hashtables
+            hasktags
             hscolour
             lens
             linear
@@ -179,7 +183,11 @@ nixos : {
             resourcet
             stm
             Stream
+            tasty
+            tasty-quickcheck
+            tasty-th
             text
+            trifecta
             vector
         ]);
 
