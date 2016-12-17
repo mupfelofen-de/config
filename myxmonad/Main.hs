@@ -78,10 +78,10 @@ main = xmonad (cfg `additionalKeysP` keys)
           ("M-o o", spawn "switch-display.sh"),
 
           -- Lock
-          ("M-l M-k", spawn "alock -bg none -cursor glyph:name=crosshair"),
-          ("M-l M-l", spawn "xscreensaver-command -lock"),
-          ("M-l M-p", spawn "xscreensaver-command -lock; sleep 1; systemctl suspend"),
-          ("M-l M-.", spawn "xscreensaver-command -lock; sleep 1; systemctl hibernate"),
+          ("M-l M-k", spawn "lock.sh -t"),
+          ("M-l M-l", spawn "lock.sh"),
+          ("M-l M-p", spawn "lock.sh -sram"),
+          ("M-l M-.", spawn "lock.sh -sdisk"),
 
           -- Redshift
           ("M-<F9>",  spawn "redshift -O 2375"),
