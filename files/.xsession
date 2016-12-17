@@ -5,5 +5,4 @@ switch-display.sh
 setopt no_bg_nice
 emacs --daemon &
 
-~/cfg/my/bin/update-xorg-services.sh
-exec s6-svscan -t0 ~/cfg/run/xorg
+exec s6-svscan -t0 ~/cfg/my/services

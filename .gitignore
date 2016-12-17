@@ -1,2 +1,4 @@
 .yas-compiled-snippets.el
 shell.nix
+/services/*/supervise
+/services/.s6-svscan/lock
