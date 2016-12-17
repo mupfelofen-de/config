@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: mod
+# key: mod
+# --
+-- Copyright:  (c) 2016 Ertugrul Söylemez
+-- License:    BSD3
+-- Maintainer: Ertugrul Söylemez <esz@posteo.de>
+
+module $1 where
+

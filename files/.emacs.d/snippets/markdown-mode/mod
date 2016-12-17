@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: mod
+# key: mod
+# --
+---
+title:     "$1"
+author:    "ertes"
+date:      "$2 (draft)"
+lang:      "en"
+copyright: "Ertugrul Söylemez"
+want-toc:  "yes"
+...
+
+$0
