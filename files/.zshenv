@@ -17,7 +17,7 @@ export PAGER="less"
 #     NIX_PATH="/nix/var/nix/profiles/per-user/never/channels/nixos"
 #     NIX_PATH+=":nixpkgs=/nix/var/nix/profiles/per-user/never/channels/nixos/nixpkgs"
 #     NIX_PATH+=":nixos-config=/etc/nixos/configuration.nix"
-NIX_PATH+=":ertes-src=/home/never/src"
+NIX_PATH+=":ertes-src=$HOME/src"
 #     export NIX_PATH
 # fi
 
