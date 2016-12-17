@@ -93,6 +93,7 @@ main = xmonad (cfg `additionalKeysP` keys)
           ("M-c c", asks (terminal . config) >>= spawn),
           ("M-c e", spawn "emacsclient -c"),
           ("M-c f", spawn "firefox"),
+          ("M-c p", spawn "firefox --private-window"),
           ("M-c s", addWorkspace "mail-1"),
           ("M-c t", spawn "mytaffybar"),
           ("M-c r", spawn "gmrun"),
@@ -119,7 +120,8 @@ main = xmonad (cfg `additionalKeysP` keys)
           ("<XF86MonBrightnessUp>",   spawn "xbacklight -inc 10"),
           ("M-m",                     spawn "urxvtc -e ncmpc"),
           ("M-.",                     spawn "mpc -q next"),
-          ("M-,",                     spawn "mpc -q prev") ]
+          ("M-,",                     spawn "mpc -q prev"),
+          ("M--",                     spawn "mpc -q stop") ]
 
     cfg = def {
             -- Misc
@@ -138,8 +140,8 @@ main = xmonad (cfg `additionalKeysP` keys)
                 fullscreenEventHook,
 
             layoutHook =
-                let reg = Mirror (Tall 1 (1/100) (33/40)) |||
-                          Tall 1 (1/100) (3/5) |||
+                let reg = Tall 1 (1/100) (3/5) |||
+                          Mirror (Tall 1 (1/100) (33/40)) |||
                           Full
 
                     -- im = let prop = Title "Gajim" `Or` Const False
