@@ -123,7 +123,7 @@ main = xmonad (cfg `additionalKeysP` keys)
           ("M-,",                     spawn "mpc -q prev"),
           ("M--",                     spawn "mpc -q stop") ]
 
-    cfg = def {
+    cfg = myDef {
             -- Misc
             focusFollowsMouse = False,
             clickJustFocuses  = False,
@@ -136,7 +136,7 @@ main = xmonad (cfg `additionalKeysP` keys)
 
             -- Hooks
             handleEventHook =
-                handleEventHook def <>
+                handleEventHook myDef <>
                 fullscreenEventHook,
 
             layoutHook =
@@ -158,7 +158,7 @@ main = xmonad (cfg `additionalKeysP` keys)
                 (className =? "URxvt" --> insertPosition Below Newer) <>
                 (isFullscreen         --> doFullFloat) <>
                 manageDocks <>
-                manageHook def,
+                manageHook myDef,
 
             -- Appearance
             borderWidth        = 2,
@@ -166,4 +166,4 @@ main = xmonad (cfg `additionalKeysP` keys)
             normalBorderColor  = "#000"
           }
 
-    def = ewmh (pagerHints defaultConfig)
+    myDef = ewmh (pagerHints def)
