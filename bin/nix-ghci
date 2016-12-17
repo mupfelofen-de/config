@@ -4,25 +4,28 @@ setopt err_exit
 setopt null_glob
 
 cabal_file=(*.cabal)
-if (( ${#cabal_file} < 1 )); then
-    unset cabal_file
-    rm -rf ghci-tmp
+if [[ ! -f $cabal_file ]]; then
     exec ghci $*
 fi
 
-if ! [[ -f reflex.cabal ]]; then
-    cabal2nix ./. > default.nix
-fi
-cabal2nix -fdevel -fexamples -ftestprogram --shell ./. > shell.nix
+
+[[ default.nix -nt $cabal_file ]] ||
+    cabal2nix . > default.nix
+
+[[ shell.nix -nt $cabal_file ]] ||
+    cabal2nix -fdevel -fexamples --shell . > shell.nix
+
+# [[ dist/shell.token -nt shell.nix ]] ||
+#     ( nix-instantiate shell.nix -Q --indirect --add-root `pwd`/dist/shell.drv > /dev/null &&
+#           touch dist/shell.token )
+
 
 args=()
 for n in $*; do
     args+=(${(q)n})
 done
 
-rm -rf ghci-tmp
-if [[ -f .want-ghcjs ]]; then
-    exec nix-shell -Q --argstr compiler ghcjs --command "exec ghcjs --interactive $args"
-else
-    exec nix-shell -Q --command "exec ghci $args"
-fi
+flags=`grep -Pio "(?<=hs-source-dirs:).*" $cabal_file | sed -re "s/[a-zA-Z_-]+/-i&/g"`
+
+#exec nix-shell `pwd`/dist/shell.drv -Q --pure --command "exec bash $args"
+exec nix-shell shell.nix -Q --pure --command "exec ghci $flags $args"
