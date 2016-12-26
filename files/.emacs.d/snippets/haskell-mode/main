@@ -2,6 +2,13 @@
 # name: main
 # key: main
 # --
+-- |
+-- Copyright:  (c) 2016 Ertugrul Söylemez
+-- License:    BSD3
+-- Maintainer: Ertugrul Söylemez <esz@posteo.de>
+
+module Main (main) where
+
+
 main :: IO ()
-main = do
-    $0
+main = pure ()
