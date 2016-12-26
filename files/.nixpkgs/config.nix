@@ -31,25 +31,18 @@ nixos : {
         ertes-base = super.buildEnv {
             name = "ertes-base";
             paths = with self; [
-                aspell
-                aspellDicts.de
-                aspellDicts.en
                 cacert
                 connect
                 curl
                 darcs
                 dict
                 emacs
-                emacsPackages.darcsum
-                # emacsPackagesNg.bbdb
                 emacsPackagesNg.geiser
                 emacsPackagesNg.haskell-mode
                 emacsPackagesNg.magit
                 emacsPackagesNg.markdown-mode
                 emacsPackagesNg.org
                 emacsPackagesNg.paredit
-                emacsPackagesNg.speck
-                emacsPackagesNg.vline
                 emacsPackagesNg.yaml-mode
                 emacsPackagesNg.yasnippet
                 execline
@@ -74,18 +67,19 @@ nixos : {
                 nmap
                 notmuch
                 p7zip
-                # pari-unstable
+                pari-unstable
+                posix_man_pages
                 psmisc
                 pv
                 pwgen
                 renameutils
-                rtorrent
                 s6
                 screen
                 smartmontools
                 sqlite
                 sshfsFuse
                 unzip
+                vmtouch
                 wget
                 zip
             ];
@@ -95,16 +89,12 @@ nixos : {
             name = "ertes-dev";
             paths = with self; [
                 AgdaStdlib
-                ansible2
                 cabal2nix
-                closurecompiler
                 ghc-env
                 ghostscript
                 gnuplot
-                graphviz
                 maxima
                 pandoc
-                pdftk
                 texlive.combined.scheme-basic
             ];
         };
@@ -125,10 +115,10 @@ nixos : {
                 gimp
                 glxinfo
                 gmrun
+                gnome3.gnome-chess
                 haskellPackages.mytaffybar
                 haskellPackages.myxmonad
                 inkscape
-                jack2Full
                 jmtpfs
                 kde4.kcharselect
                 kid3
@@ -138,11 +128,11 @@ nixos : {
                 mpv
                 ncmpc
                 pavucontrol
-                qjackctl
                 redshift
                 rxvt_unicode
                 scrot
                 syncthing
+                t
                 torbrowser
                 transmission
                 unclutter
@@ -151,14 +141,14 @@ nixos : {
                 xlibs.xev
                 xlibs.xmodmap
                 xlibs.xwininfo
-                xscreensaver
+                xtrlock-pam
                 youtube-dl
                 zathura
+                znc
             ];
         };
 
         ghc-env = super.haskellPackages.ghcWithPackages (p: with p; [
-            ad
             Agda
             arithmoi
             async
@@ -169,25 +159,20 @@ nixos : {
             fingertree
             free
             generic-deriving
-            hashtables
             hasktags
             hscolour
+            kan-extensions
             lens
             linear
             mwc-random
             network
             pipes
             random
-            rapid
             reflex
             resourcet
             stm
             Stream
-            tasty
-            tasty-quickcheck
-            tasty-th
             text
-            trifecta
             vector
         ]);
 
