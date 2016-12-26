@@ -34,15 +34,15 @@ main = xmonad (cfg `additionalKeysP` keys)
     where
     keys =
         [ -- Switch workspaces
-          ("M-<F1>",     gotoGroup "work"),
-          ("M-<F2>",     gotoGroup "text"),
-          ("M-<F3>",     gotoGroup "chat"),
-          ("M-<F4>",     gotoGroup "free"),
-          ("M-1",        gotoWS 1),
-          ("M-2",        gotoWS 2),
-          ("M-3",        gotoWS 3),
-          ("M-4",        gotoWS 4),
-          ("M-v",        toggleWS),
+          ("M-<F1>", gotoGroup "work"),
+          ("M-<F2>", gotoGroup "text"),
+          ("M-<F3>", gotoGroup "chat"),
+          ("M-<F4>", gotoGroup "free"),
+          ("M-1",    gotoWS 1),
+          ("M-2",    gotoWS 2),
+          ("M-3",    gotoWS 3),
+          ("M-4",    gotoWS 4),
+          ("M-v",    toggleWS),
 
           -- Send windows to other workspaces
           ("M-S-<F1>", shiftToGroup "work"),
@@ -78,10 +78,10 @@ main = xmonad (cfg `additionalKeysP` keys)
           ("M-o o", spawn "switch-display.sh"),
 
           -- Lock
-          ("M-l M-k", spawn "lock.sh -t"),
-          ("M-l M-l", spawn "lock.sh"),
-          ("M-l M-p", spawn "lock.sh -sram"),
-          ("M-l M-.", spawn "lock.sh -sdisk"),
+          ("M-l M-k", spawn "lock-desktop -t"),
+          ("M-l M-l", spawn "lock-desktop"),
+          ("M-l M-p", spawn "lock-desktop -s ram"),
+          ("M-l M-.", spawn "lock-desktop -s disk"),
 
           -- Redshift
           ("M-<F9>",  spawn "redshift -O 2375"),
