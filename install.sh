@@ -23,3 +23,5 @@ inst_file() {
 }
 
 (cd files && inst_file {,.}*)
+
+echo "Remember to compile scripts." >&2
