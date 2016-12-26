@@ -154,7 +154,7 @@
     ("--ghc-option=-fdefer-typed-holes" "--ghc-option=-ferror-spans" "--ghc-option=-ignore-dot-ghci")))
  '(haskell-process-args-ghci
    (quote
-    ("-W" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci" "-outputdir=ghci-tmp")))
+    ("-W" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci")))
  '(haskell-process-path-cabal "nix-cabal")
  '(haskell-process-path-ghci "nix-ghci")
  '(haskell-process-prompt-restart-on-cabal-change nil)
