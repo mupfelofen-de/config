@@ -148,6 +148,11 @@ nixos : {
             ];
         };
 
+        ertes-scripts =
+            import (builtins.getEnv "HOME" + "/cfg/my/scripts") {
+                pkgs = self;
+            };
+
         ghc-env = super.haskellPackages.ghcWithPackages (p: with p; [
             Agda
             arithmoi

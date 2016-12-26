@@ -3,4 +3,5 @@ shell.nix
 /services/*/supervise
 /services/.s6-svscan/lock
 TAGS
-/bin/tmp
+/scripts/out
+/scripts/tmp
