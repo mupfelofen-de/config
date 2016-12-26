@@ -116,86 +116,55 @@ eval $(dircolors ~/cfg/my/dircolors)
 umask 022
 
 
-# directories
-setopt \
-    auto_pushd \
-    pushd_ignore_dups \
-    pushd_silent \
-    pushd_to_home
-
-# completion
-setopt \
-    no_auto_remove_slash \
-    complete_in_word \
-    glob_complete \
-    no_list_beep \
-    list_packed
-
-# expansion and globbing
-setopt \
-    brace_ccl \
-    csh_null_glob \
-    extended_glob \
-    ksh_glob \
-    magic_equal_subst \
-    rc_expand_param \
-    rm_star_silent \
-    sh_glob \
-    no_unset
-
-# history
-setopt \
-    extended_history \
-    hist_allow_clobber \
-    no_hist_beep \
-    hist_fcntl_lock \
-    hist_ignore_all_dups \
-    hist_ignore_space \
-    hist_lex_words \
-    hist_no_store \
-    hist_reduce_blanks \
-    hist_save_no_dups \
-    hist_verify \
-    inc_append_history
-
-# init
-setopt \
-    no_global_export
-
-# input/output
-setopt \
-    interactive_comments \
-    no_clobber \
-    no_flow_control \
-    rm_star_silent
-
-# job control
-setopt \
-    auto_continue \
-    no_bg_nice \
-    long_list_jobs \
-    monitor \
-    notify
-
-# prompting
-setopt \
-    rm_star_silent \
-    prompt_subst \
-    transient_rprompt
-
-# scripts and functions
-setopt \
-    c_bases \
-    c_precedences \
-    no_eval_lineno
-
-# shell emulation
-setopt \
-    bsd_echo
-
-# zle
-setopt \
-    no_beep
+setopt auto_continue
+setopt auto_pushd
+setopt brace_ccl
+setopt bsd_echo
+setopt c_bases
+setopt c_precedences
+setopt complete_in_word
+setopt csh_null_glob
+setopt extended_glob
+setopt extended_history
+setopt glob_complete
+setopt hash_executables_only
+setopt hist_allow_clobber
+setopt hist_fcntl_lock
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt hist_lex_words
+setopt hist_no_store
+setopt hist_reduce_blanks
+setopt hist_save_no_dups
+setopt hist_verify
+setopt inc_append_history
+setopt interactive_comments
+setopt ksh_glob
+setopt list_packed
+setopt long_list_jobs
+setopt magic_equal_subst
+setopt monitor
+setopt no_auto_remove_slash
+setopt no_beep
+setopt no_bg_nice
+setopt no_clobber
+setopt no_eval_lineno
+setopt no_flow_control
+setopt no_global_export
+setopt no_hist_beep
+setopt no_list_beep
+setopt no_unset
+setopt notify
+setopt prompt_subst
+setopt pushd_ignore_dups
+setopt pushd_silent
+setopt pushd_to_home
+setopt rc_expand_param
+setopt rm_star_silent
+setopt rm_star_silent
+setopt rm_star_silent
+setopt sh_glob
+setopt transient_rprompt
 
 
 bindkey "^I"   complete-word
