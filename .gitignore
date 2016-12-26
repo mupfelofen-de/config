@@ -5,3 +5,4 @@ shell.nix
 TAGS
 /scripts/out
 /scripts/tmp
+result
