@@ -1,0 +1,5 @@
+#! /usr/bin/env sh
+
+cfg=`pwd`/screenrc
+cd
+exec screen -c $cfg -S emacs -D -m -- emacs -f server-start -nw

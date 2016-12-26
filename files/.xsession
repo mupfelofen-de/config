@@ -3,7 +3,6 @@
 switch-display.sh
 
 setopt no_bg_nice
-emacs --daemon &
 
 xset +dpms
 xset dpms 0 0 7200
