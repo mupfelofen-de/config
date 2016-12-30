@@ -49,7 +49,7 @@ command_not_found_handler() {
 
 nohist() {
     unset HISTFILE
-    echo -en "\e]11;[90]#555\x9C\e]708;[90]#555\x9C"
+    setbgcolor "[80]#555"
     echo "History saving disabled."
 }
 
@@ -64,6 +64,12 @@ preexec() {
         echo -n "[$2]"
         echo -n " in [`pwd | sed -e "s $HOME ~ "`] at `date "+%y-%m-%d/%u %H:%M:%S"`"
         echo -en "\a"
+    fi
+}
+
+setbgcolor() {
+    if [[ $TERM == rxvt* ]]; then
+        echo -en "\e]11;$1\x9C\e]708;$1\x9C"
     fi
 }
 
@@ -204,4 +210,10 @@ if [[ -z ${nev_subshell-} ]]; then
         unset mS
         unset mU
     fi
+fi
+
+if [[ $UID == 0 ]]; then
+    setbgcolor "[80]#300"
+else
+    setbgcolor "[80]#030"
 fi

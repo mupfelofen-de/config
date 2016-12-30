@@ -42,11 +42,11 @@ URxvt.scrollWithBuffer:  true
 
 ! colors
 URxvt.depth:         32
-URxvt.background:    [80]#000000
-URxvt.foreground:    #FFC080
-URxvt.colorBD:       #FFE0D0
-URxvt.cursorColor:   #C00000
-URxvt.cursorColor2:  #FF8000
+URxvt.background:    [80]#000
+URxvt.foreground:    #fc8
+URxvt.colorBD:       #fdc
+URxvt.cursorColor:   #c00
+URxvt.cursorColor2:  #f80
 URxvt.transparent:   false
-URxvt.pointerColor:  #FFFF00
-URxvt.pointerColor2: #600000
+URxvt.pointerColor:  #ff0
+URxvt.pointerColor2: #700
