@@ -18,6 +18,7 @@ alias rm='rm -Iv'
 alias rsync='rsync -aSP'
 alias s='su -l'
 alias sc='su -lc "screen -S nevroot -xR"'
+alias svc='s6-svc'
 alias tag='tmsu tag'
 alias tags='tmsu tags'
 alias timidity='timidity -c ~/inst/eawpats/linuxconfig/timidity.cfg -B8,8 -p32 -EFdelay=d,0 -EFchorus=d,0 -EFreverb=d,0 -Os'
@@ -54,8 +55,10 @@ nohist() {
 }
 
 precmd() {
+    hash -d cfg=~/cfg/my
     hash -d pkgs=~/.nix-defexpr/channels/nixos/nixpkgs/pkgs
     hash -d sr=~/snd/music
+    hash -d sv=~/cfg/my/services
 }
 
 preexec() {
