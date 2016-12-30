@@ -9,7 +9,9 @@
     (other-window 1)
     (beginning-of-buffer)
     (search-forward-regexp "^module")
-    (beginning-of-line))
+    (search-forward-regexp "^ +where")
+    (beginning-of-line)
+    (previous-line))
 
   (defun ertes-haskell-go-extensions ()
     (interactive)
