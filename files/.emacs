@@ -95,6 +95,8 @@
  '(enable-local-variables t)
  '(erc-disable-ctcp-replies t)
  '(erc-email-userid "ertes")
+ '(erc-fill-column 90)
+ '(erc-fill-prefix "    ")
  '(erc-generate-log-file-name-function (quote erc-generate-log-file-name-short))
  '(erc-join-buffer (quote bury))
  '(erc-keywords (quote ("ertugrul" "s\\(oe\\|ö\\)ylemez")))
@@ -107,7 +109,7 @@
  '(erc-max-buffer-size 65536)
  '(erc-modules
    (quote
-    (autojoin button completion fill irccontrols list match move-to-prompt netsplit networks noncommands readonly ring services stamp track truncate)))
+    (autojoin button completion fill irccontrols match move-to-prompt netsplit networks noncommands readonly ring track truncate)))
  '(erc-nick
    (quote
     ("ertes" "ertesx" "ertes-t6v" "ertes-9L2" "ertes-8pU")))
@@ -131,6 +133,7 @@
  '(font-latex-fontify-sectioning 1.0)
  '(font-latex-script-display (quote (nil)))
  '(font-lock-maximum-size 1048576)
+ '(geiser-guile-manual-lookup-nodes (quote ("Guile" "guile-2.0" "guile")))
  '(global-font-lock-mode t nil (font-lock))
  '(gnus-inhibit-images t)
  '(haskell-cabal-list-comma-position (quote after))
@@ -320,7 +323,7 @@ Erstellt: %U" :prepend t))))
  '(pc-select-selection-keys-only t)
  '(pc-selection-mode t)
  '(read-quoted-char-radix 10)
- '(save-place t nil (saveplace))
+ '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode (quote right))
  '(scroll-error-top-bottom t)
  '(send-mail-function (quote sendmail-send-it))
@@ -351,7 +354,7 @@ Erstellt: %U" :prepend t))))
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 136 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 136 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(agda2-highlight-datatype-face ((t (:foreground "cyan"))))
  '(agda2-highlight-function-face ((t (:foreground "cyan"))))
  '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
@@ -360,9 +363,8 @@ Erstellt: %U" :prepend t))))
  '(agda2-highlight-record-face ((t (:foreground "cyan"))))
  '(agda2-highlight-unsolved-constraint-face ((t (:background "#530"))))
  '(agda2-highlight-unsolved-meta-face ((t (:background "#530"))))
- '(erc-current-nick-face ((t (:foreground "#4b7" :weight bold))))
- '(erc-input-face ((t (:foreground "#cc5"))))
- '(erc-my-nick-face ((t (:foreground "#cc5" :weight bold))))
+ '(erc-input-face ((t (:foreground "cyan"))))
+ '(erc-my-nick-face ((t (:foreground "lightred"))))
  '(notmuch-message-summary-face ((t (:background "#808")))))
 
 (defun ertes-invert-colours ()
