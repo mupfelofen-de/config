@@ -134,7 +134,6 @@ setopt c_precedences
 setopt complete_in_word
 setopt csh_null_glob
 setopt extended_glob
-setopt extended_history
 setopt glob_complete
 setopt hash_executables_only
 setopt hist_allow_clobber
