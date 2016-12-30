@@ -214,9 +214,3 @@ if [[ -z ${nev_subshell-} ]]; then
         unset mU
     fi
 fi
-
-if [[ $UID == 0 ]]; then
-    setbgcolor "[80]#300"
-else
-    setbgcolor "[80]#030"
-fi
