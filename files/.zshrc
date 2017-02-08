@@ -169,9 +169,7 @@ setopt pushd_silent
 setopt pushd_to_home
 setopt rc_expand_param
 setopt rm_star_silent
-setopt rm_star_silent
-setopt rm_star_silent
-setopt sh_glob
+# setopt sh_glob
 setopt transient_rprompt
 
 
