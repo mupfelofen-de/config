@@ -3,6 +3,18 @@
   (require 'haskell-interactive-mode)
   (require 'haskell-process)
 
+  (defun ertes-haskell-add-import (&optional module)
+    (interactive)
+    (save-excursion
+      (goto-char (point-max))
+      (haskell-navigate-imports)
+      (insert (haskell-import-for-module
+               (or module
+                   (haskell-complete-module-read
+                    "Module: "
+                    (map 'list 'car haskell-import-mapping)))))
+      (haskell-sort-imports)))
+
   (defun ertes-haskell-go-exports ()
     (interactive)
     (split-window-vertically)
@@ -33,7 +45,12 @@
     (split-window-vertically)
     (other-window 1)
     (haskell-navigate-imports-go)
-    (open-line 1))
+    (if (search-forward-regexp "^import " nil t)
+        (progn
+          (beginning-of-line)
+          (open-line 1))
+      (open-line 2))
+    (insert "import "))
 
   (defun ertes-haskell-return ()
     (interactive)
@@ -67,6 +84,7 @@
   (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
   (define-key haskell-mode-map (kbd "C-c b") 'haskell-interactive-bring)
+  (define-key haskell-mode-map (kbd "C-c i a") 'ertes-haskell-add-import)
   (define-key haskell-mode-map (kbd "C-c i e") 'ertes-haskell-go-exports)
   (define-key haskell-mode-map (kbd "C-c i i") 'ertes-haskell-go-imports)
   (define-key haskell-mode-map (kbd "C-c i l") 'ertes-haskell-go-extensions)
