@@ -9,7 +9,7 @@ if [[ ! -f $cabal_file ]]; then
 fi
 
 
-[[ default.nix -nt $cabal_file ]] ||
+[[ -f .no-cabal2nix || default.nix -nt $cabal_file ]] ||
     cabal2nix . > default.nix
 
 [[ shell.nix -nt $cabal_file ]] ||

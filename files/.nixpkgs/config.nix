@@ -22,8 +22,26 @@ nixos : {
         in {
             mytaffybar = self.callPackage ../cfg/my/mytaffybar {};
             myxmonad = self.callPackage ../cfg/my/myxmonad {};
-            rapid = asGit <ertes-src/rapid> { rev = "e3a1ead573e4aca23a1ff55810c69cecf10e2331"; sha256 = "1pga5flvkqyin71zmlxf2v4farg0mi0i60f6znmi9217zihrr4p5"; };
-            reflex = asGit <ertes-src/reflex> { rev = "2e9a8de650857424fb93b372c6d00fda5e99d380"; sha256 = "126j7siz004ihwggi9jnva49wymdj29ra0sm4k545y2xcbvjks6h"; };
+            powermate = asGit <ertes-src/powermate> {
+                rev = "ed4381827bcb197cb1fd4a63c2e04bcdb7548899";
+                sha256 = "1bj073phaij38b057adsgqbvqr2lvv99vicxixmysvj8r4gnz57l";
+            };
+            rapid = asGit <ertes-src/rapid> {
+                rev = "e3a1ead573e4aca23a1ff55810c69cecf10e2331";
+                sha256 = "1pga5flvkqyin71zmlxf2v4farg0mi0i60f6znmi9217zihrr4p5";
+            };
+            rapid-term = asGit <ertes-src/rapid-term> {
+                rev = "f46b0b8011b638706e34c5b23ad54b8f54d9854c";
+                sha256 = "0g852pwg0pmsbpgfkvygxr9fyzr9x6z5km0m8drz18521c6bhbfa";
+            };
+            reflex = asGit <ertes-src/reflex> {
+                rev = "d78ba4318c425ca9b942dc387d7c5c7ab2d2e095";
+                sha256 = "10sryvwdf88ajkp35yma8llkb38cp63vjr5mq2hba4s2d8yg649q";
+            };
+            wires = asGit <ertes-src/wires> {
+                rev = "53ad7aae155d420f3de7bd7222fe13f05fe13110";
+                sha256 = "1nhq61rqfv8m0yiw7h8hmwmbvll7cx6f9yyp8ymf8rrhdk5fhd4i";
+            };
         };
 
     packageOverrides = super: let self = super.pkgs; in {
@@ -154,6 +172,7 @@ nixos : {
             };
 
         ghc-env = super.haskellPackages.ghcWithPackages (p: with p; [
+            ad
             Agda
             arithmoi
             async
@@ -164,6 +183,7 @@ nixos : {
             fingertree
             free
             generic-deriving
+            ghc-datasize
             hasktags
             hscolour
             kan-extensions
@@ -175,10 +195,13 @@ nixos : {
             random
             reflex
             resourcet
+            smallcheck
+            sqlite-simple
             stm
             Stream
             text
             vector
+            wires
         ]);
 
         ghcjs-env = super.haskell.packages.ghcjs.ghcWithPackages (p: with p; [

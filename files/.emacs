@@ -139,6 +139,45 @@
  '(haskell-cabal-list-comma-position (quote after))
  '(haskell-doc-prettify-types nil)
  '(haskell-doc-show-reserved nil)
+ '(haskell-import-mapping
+   (quote
+    (("B" . "import Data.ByteString (ByteString)
+import qualified Data.ByteString as B
+")
+     ("Bl" . "import qualified Data.ByteString.Lazy as Bl
+")
+     ("M" . "import Data.Map.Strict (Map)
+import qualified Data.Map.Strict as M
+")
+     ("Mh" . "import Data.HashMap.Strict (HashMap)
+import qualified Data.HashMap.Strict as Mh
+")
+     ("Mi" . "import Data.IntMap.Strict (IntMap)
+import qualified Data.IntMap.Strict as Mi
+")
+     ("V" . "import Data.Vector.Generic (Mutable, Vector)
+import qualified Data.Vector.Generic as V
+")
+     ("Vb" . "import qualified Data.Vector as Vb
+")
+     ("Vbm" . "import qualified Data.Vector.Mutable as Vbm
+")
+     ("Vm" . "import Data.Vector.Generic.Mutable (MVector)
+import qualified Data.Vector.Generic.Mutable as Vm
+")
+     ("Vs" . "import qualified Data.Vector.Storable as Vs
+")
+     ("Vu" . "import qualified Data.Vector.Unboxed as Vu
+")
+     ("S" . "import Data.Set (Set)
+import qualified Data.Set as S
+")
+     ("Sh" . "import Data.HashSet (HashSet)
+import qualified Data.HashSet as Sh
+")
+     ("Si" . "import Data.IntSet (IntSet)
+import qualified Data.IntSet as Si
+"))))
  '(haskell-indent-after-keywords
    (quote
     (("where" 0 0)
@@ -152,7 +191,7 @@
  '(haskell-indent-rhs-align-column 4)
  '(haskell-indent-spaces 4)
  '(haskell-indent-thenelse 2)
- '(haskell-indentation-left-offset 4)
+ '(haskell-interactive-mode-scroll-to-bottom t)
  '(haskell-process-args-cabal-repl
    (quote
     ("--ghc-option=-fdefer-typed-holes" "--ghc-option=-ferror-spans" "--ghc-option=-ignore-dot-ghci")))
@@ -162,6 +201,9 @@
  '(haskell-process-path-cabal "nix-cabal")
  '(haskell-process-path-ghci "nix-ghci")
  '(haskell-process-prompt-restart-on-cabal-change nil)
+ '(haskell-process-show-debug-tips nil)
+ '(haskell-process-suggest-language-pragmas nil)
+ '(haskell-process-suggest-overloaded-strings nil)
  '(haskell-process-type (quote ghci))
  '(haskell-tags-on-save t)
  '(ibuffer-expert t)
