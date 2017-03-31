@@ -3,7 +3,8 @@ ao=pulse
 audio-display=no
 audio-channels=2
 autofit=50%
-cache-default=32768
+cache-default=1048576
 no-ytdl
 vo=opengl
-ytdl-format=best,best
+x11-netwm=yes
+ytdl-format=bestvideo[height<=720]+bestaudio/best
