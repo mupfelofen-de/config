@@ -1,0 +1,3 @@
+#! /usr/bin/env sh
+
+exec bitlbee -c ../../bitlbee/bitlbee.conf -n
