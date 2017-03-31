@@ -20,3 +20,5 @@ import System.Random
 :set prompt "> "
 :seti -XBangPatterns
 :seti -XKindSignatures
+
+-- :! stty -echo icanon 2> /dev/null
