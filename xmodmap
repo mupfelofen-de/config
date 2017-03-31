@@ -70,12 +70,10 @@ keycode 91 = Delete U002E
 !keycode 160 = XF86AudioMute
 
 ! Host/state-specific
-#ifdef DEIMOS_HOME
-keycode 119 = Delete
-keycode 135 = Next
-#endif
-
-#ifdef DEIMOS_MOBILE
+#ifdef MOBILE
 keycode 119 = Delete
 keycode 135 = Delete
+#else
+keycode 119 = Delete
+keycode 135 = Next
 #endif
