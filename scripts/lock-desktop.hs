@@ -1,5 +1,5 @@
 -- |
--- Copyright:  (c) 2016 Ertugrul Söylemez
+-- Copyright:  (c) 2017 Ertugrul Söylemez
 -- License:    BSD3
 -- Maintainer: Ertugrul Söylemez <esz@posteo.de>
 
@@ -10,6 +10,7 @@ import Control.Concurrent.Async
 import Control.Exception
 import Control.Monad.Codensity
 import Control.Monad.IO.Class
+import Data.Monoid
 import Options.Applicative
 import System.Directory
 import System.FilePath
