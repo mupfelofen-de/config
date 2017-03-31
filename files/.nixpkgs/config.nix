@@ -193,8 +193,10 @@ nixos : {
             network
             pipes
             random
+            rapid
             reflex
             resourcet
+            sdl2
             smallcheck
             sqlite-simple
             stm
