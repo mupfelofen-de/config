@@ -16,14 +16,15 @@ Xft.hintstyle: hintfull
 
 !== Terminals ==!
 
-URxvt.font:           xft:DejaVu Sans Mono:pixelsize=15,-misc-fixed-bold-r-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
-URxvt.boldFont:       xft:DejaVu Sans Mono:pixelsize=15:bold,-misc-fixed-bold-r-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
-URxvt.italicFont:     xft:DejaVu Sans Mono:pixelsize=15:italic,-misc-fixed-bold-i-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-i-normal--15-140-75-75-c-90-iso10646-1
-URxvt.boldItalicFont: xft:DejaVu Sans Mono:pixelsize=15:italic,-misc-fixed-bold-i-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-i-normal--15-140-75-75-c-90-iso10646-1
+URxvt.font:           xft:DejaVu Sans Mono:pixelsize=18,-misc-fixed-bold-r-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
+URxvt.boldFont:       xft:DejaVu Sans Mono:pixelsize=18:bold,-misc-fixed-bold-r-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-r-normal--15-140-75-75-c-90-iso10646-1
+URxvt.italicFont:     xft:DejaVu Sans Mono:pixelsize=18:italic,-misc-fixed-bold-i-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-i-normal--15-140-75-75-c-90-iso10646-1
+URxvt.boldItalicFont: xft:DejaVu Sans Mono:pixelsize=18:italic,-misc-fixed-bold-i-normal--15-140-75-75-c-90-iso10646-1,-misc-fixed-medium-i-normal--15-140-75-75-c-90-iso10646-1
 
-URxvt.keysym.M-C-1: command:\033]710;xft:DejaVu Sans Mono:pixelsize=12\007\033]711;xft:DejaVu Sans Mono:pixelsize=12:bold\007
-URxvt.keysym.M-C-2: command:\033]710;xft:DejaVu Sans Mono:pixelsize=15\007\033]711;xft:DejaVu Sans Mono:pixelsize=15:bold\007
-URxvt.keysym.M-C-3: command:\033]710;xft:DejaVu Sans Mono:pixelsize=21\007\033]711;xft:DejaVu Sans Mono:pixelsize=21:bold\007
+URxvt.keysym.M-C-1: command:\033]710;xft:DejaVu Sans Mono:pixelsize=15\007\033]711;xft:DejaVu Sans Mono:pixelsize=15:bold\007
+URxvt.keysym.M-C-2: command:\033]710;xft:DejaVu Sans Mono:pixelsize=18\007\033]711;xft:DejaVu Sans Mono:pixelsize=18:bold\007
+URxvt.keysym.M-C-3: command:\033]710;xft:DejaVu Sans Mono:pixelsize=28\007\033]711;xft:DejaVu Sans Mono:pixelsize=28:bold\007
+URxvt.keysym.M-C-4: command:\033]11;[70]#104\302\234\033]708;[70]#104\302\234
 
 ! behaviour
 URxvt.cutchars:         "`\"\'&()*,;@<=>?[]{|}"
@@ -42,7 +43,7 @@ URxvt.scrollWithBuffer:  true
 
 ! colors
 URxvt.depth:         32
-URxvt.background:    [80]#000
+URxvt.background:    [70]#310
 URxvt.foreground:    #fc8
 URxvt.colorBD:       #fdc
 URxvt.cursorColor:   #c00
