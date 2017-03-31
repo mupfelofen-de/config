@@ -1,10 +1,9 @@
+# -*- mode: snippet -*-
 # key: test
 # name: test
 # --
 module Main where
-
 $0
-
 
 main :: IO ()
 main = pure ()
