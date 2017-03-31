@@ -1,7 +1,7 @@
 #! /usr/bin/env zsh
 
 alias cp='cp -i --reflink=auto'
-alias defrag='btrfs filesystem defragment -rt 128m'
+alias defrag='btrfs filesystem defragment -r -t1g'
 alias df='df -Th'
 alias egrep='egrep --color=auto'
 alias em=$EDITOR
@@ -32,6 +32,7 @@ alias ytd='youtube-dl -s --get-description'
 alias n.list='NIX_PAGER="less -S" nix-env -qa --description'
 alias n.meta='nix-env -qa --xml --meta'
 alias n.q='nix-env -q'
+alias n.r='nix-repl "<nixpkgs>"'
 
 
 chpwd() {
