@@ -197,7 +197,7 @@ import qualified Data.IntSet as Si
     ("--ghc-option=-fdefer-typed-holes" "--ghc-option=-ferror-spans" "--ghc-option=-ignore-dot-ghci")))
  '(haskell-process-args-ghci
    (quote
-    ("-W" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci")))
+    ("-Wall" "-Wno-type-defaults" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci")))
  '(haskell-process-path-cabal "nix-cabal")
  '(haskell-process-path-ghci "nix-ghci")
  '(haskell-process-prompt-restart-on-cabal-change nil)
@@ -209,7 +209,7 @@ import qualified Data.IntSet as Si
  '(ibuffer-expert t)
  '(ibuffer-never-show-predicates
    (quote
-    ("^\\*magit-" "^\\*Completions\\*$" "^\\*scratch\\*$" "^\\*Shell Command Output\\*$" "^\\*Messages\\*$" "^\\*HS-Error\\*$" "^\\*Help\\*$" "^#")) nil (ibuf-ext))
+    ("^app\\.org$" "^bitlbee$" "^&bitlbee$" "^\\*calc trail\\*$" "^\\*calculator\\*$" "^\\*calendar\\*$" "^\\*compilation\\*$" "^\\*completions\\*$" "^\\*customize " "^diary$" "^freenode$" "^\\*help\\*$" "^\\*hs-error\\*$" "^\\*ledger report\\*$" "^\\*magit[:-]" "^\\*messages\\*$" "^notes.org$" "^\\*notmuch-hello\\*$" "^personal\\.ledger$" "^\\*scratch\\*$" "^\\*shell command output\\*$" "^#")) nil (ibuf-ext))
  '(imaxima-equation-color "gray")
  '(imaxima-fnt-size "huge")
  '(indent-tabs-mode nil)
@@ -285,7 +285,9 @@ import qualified Data.IntSet as Si
  '(nxml-sexp-element-flag t)
  '(nxml-slash-auto-complete-flag t)
  '(org-adapt-indentation nil)
- '(org-agenda-files (quote ("~/org/app.org" "~/org/notes.org")))
+ '(org-agenda-files
+   (quote
+    ("~/prj/intelego/intelego.org" "~/org/app.org" "~/org/notes.org")))
  '(org-agenda-time-grid
    (quote
     ((daily today)
@@ -296,7 +298,7 @@ import qualified Data.IntSet as Si
    (quote
     (("a" "Appointment" entry
       (file+datetree+prompt "~/org/app.org")
-      "* APP %T %?
+      "* %T %?
 Erstellt: %<%a, %F %T>" :prepend t :empty-lines-after 1)
      ("n" "Note" entry
       (file+olp "~/org/notes.org" "Notizen")
@@ -377,6 +379,7 @@ Erstellt: %U" :prepend t))))
  '(special-display-buffer-names nil)
  '(speck-aspell-coding-system (quote utf-8))
  '(speck-aspell-default-dictionary-name "de_DE")
+ '(speedbar-show-unknown-files t)
  '(standard-indent 4)
  '(tab-always-indent (quote complete))
  '(tab-stop-list (quote (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60)))
@@ -396,7 +399,7 @@ Erstellt: %U" :prepend t))))
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 136 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "#300" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(agda2-highlight-datatype-face ((t (:foreground "cyan"))))
  '(agda2-highlight-function-face ((t (:foreground "cyan"))))
  '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
@@ -406,8 +409,9 @@ Erstellt: %U" :prepend t))))
  '(agda2-highlight-unsolved-constraint-face ((t (:background "#530"))))
  '(agda2-highlight-unsolved-meta-face ((t (:background "#530"))))
  '(erc-input-face ((t (:foreground "cyan"))))
- '(erc-my-nick-face ((t (:foreground "lightred"))))
- '(notmuch-message-summary-face ((t (:background "#808")))))
+ '(erc-my-nick-face ((t (:foreground "cyan"))))
+ '(notmuch-message-summary-face ((t (:background "#808"))))
+ '(trailing-whitespace ((t (:background "dark red")))))
 
 (defun ertes-invert-colours ()
   (interactive)
