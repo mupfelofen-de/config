@@ -20,7 +20,7 @@ abbrevWs (x:xs) = x : foldl' (\_ y -> [y]) [] xs
 main :: IO ()
 main = do
     pager <- pagerNew pagerCfg
-    defaultTaffybar (cfg pager)
+    taffybarMain (cfg pager)
 
     where
     cfg pager =
@@ -34,17 +34,20 @@ main = do
                 textMemoryMonitorNew "$rest$" 5,
                 textCpuMonitorNew "$total$" 5 ],
 
+          monitorNumber = 1,
+
           startWidgets =
               [ wspaceSwitcherNew pager,
                 windowSwitcherNew pager ]
        }
 
     pagerCfg = defaultPagerConfig {
-                 activeLayout    = const "",
-                 activeWindow    = colorize "#fff" "#000" . shorten 300,
-                 activeWorkspace = colorize "#ff6" "#008",
-                 emptyWorkspace  = const "",
-                 hiddenWorkspace = colorize "#999" "#000" . abbrevWs,
-                 urgentWorkspace = colorize "#f60" "#800",
-                 widgetSep       = " "
+                 activeLayout     = const "",
+                 activeWindow     = colorize "#fff" "#000" . shorten 300,
+                 activeWorkspace  = colorize "#ff6" "#008",
+                 emptyWorkspace   = const "",
+                 hiddenWorkspace  = colorize "#999" "#000" . abbrevWs,
+                 urgentWorkspace  = colorize "#f60" "#800",
+                 visibleWorkspace = colorize "#ddd" "#000" . ('(' :) . (++ ")") . abbrevWs,
+                 widgetSep        = " "
                }

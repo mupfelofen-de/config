@@ -5,7 +5,7 @@ mkDerivation {
   src = ./.;
   isLibrary = false;
   isExecutable = true;
-  buildDepends = [ base taffybar ];
+  executableHaskellDepends = [ base taffybar ];
   description = "Taffybar configuration";
   license = stdenv.lib.licenses.unfree;
 }
