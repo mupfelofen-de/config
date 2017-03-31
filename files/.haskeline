@@ -1,0 +1,3 @@
+completionPromptLimit: Nothing
+historyDuplicates: IgnoreAll
+maxHistorySize: Just 4096
