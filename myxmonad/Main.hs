@@ -30,7 +30,6 @@ import XMonad.Util.XSelection
 
 main :: IO ()
 main = xmonad (cfg `additionalKeysP` keys)
-
     where
     keys =
         [ -- Switch workspaces
@@ -71,11 +70,16 @@ main = xmonad (cfg `additionalKeysP` keys)
           ("M-s f", withFocused float),
           ("M-s s", withFocused (windows . W.sink)),
 
-          -- Screen
+          -- Screens
+          ("M-<",        nextScreen),
+          ("M-S-<",      shiftNextScreen),
+          ("M-<Return>", swapNextScreen),
+
           ("M-o b", spawn "switch-display.sh beamer"),
           ("M-o h", spawn "switch-display.sh home"),
           ("M-o m", spawn "switch-display.sh mobile"),
           ("M-o o", spawn "switch-display.sh"),
+          ("M-o s", spawn "switch-display.sh single"),
 
           -- Lock
           ("M-l M-k", spawn "lock-desktop -t"),
@@ -97,7 +101,6 @@ main = xmonad (cfg `additionalKeysP` keys)
           ("M-c s", addWorkspace "mail-1"),
           ("M-c t", spawn "mytaffybar"),
           ("M-c r", spawn "gmrun"),
-          ("M-<Return>", spawn "urxvt"),
 
           ("M-c S-f", safePromptSelection "firefox"),
 
@@ -106,6 +109,7 @@ main = xmonad (cfg `additionalKeysP` keys)
           ("M-<KP_End>",  scrMoveTo 0 1),   ("M-<KP_Down>",  scrMoveTo 0.5 1),   ("M-<KP_Page_Down>", scrMoveTo 1 1),
 
           ("<Print>", spawn "scrot ~/tmp/scrshot/%Y-%m-%d-%H:%M:%S.png"),
+          ("S-<Print>", spawn "scrot -u ~/tmp/scrshot/%Y-%m-%d-%H:%M:%S.png"),
 
           -- Misc
           ("C-M-q", restart "myxmonad" False),
