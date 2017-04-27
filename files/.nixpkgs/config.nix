@@ -26,13 +26,17 @@ nixos : {
                 rev = "ed4381827bcb197cb1fd4a63c2e04bcdb7548899";
                 sha256 = "1bj073phaij38b057adsgqbvqr2lvv99vicxixmysvj8r4gnz57l";
             };
+            progress-meter = asGit <ertes-src/progress-meter> {
+                rev = "refs/tags/v0.1.0";
+                sha256 = "0mzal1bbyww1a8qnhp6y69mbbx04filk29l00348q465bz0zd9k9";
+            };
             rapid = asGit <ertes-src/rapid> {
                 rev = "e3a1ead573e4aca23a1ff55810c69cecf10e2331";
                 sha256 = "1pga5flvkqyin71zmlxf2v4farg0mi0i60f6znmi9217zihrr4p5";
             };
             rapid-term = asGit <ertes-src/rapid-term> {
-                rev = "f46b0b8011b638706e34c5b23ad54b8f54d9854c";
-                sha256 = "0g852pwg0pmsbpgfkvygxr9fyzr9x6z5km0m8drz18521c6bhbfa";
+                rev = "15101bdd357c89c5f15c7a0c74a26225379cfa2b";
+                sha256 = "0am4d5s1y00066yz89lp1vxwz2kfs58b3harqn4vpas199lklj8w";
             };
             reflex = asGit <ertes-src/reflex> {
                 rev = "d78ba4318c425ca9b942dc387d7c5c7ab2d2e095";
@@ -189,11 +193,14 @@ nixos : {
             kan-extensions
             lens
             linear
+            megaparsec
             mwc-random
             network
             pipes
+            progress-meter
             random
             rapid
+            rapid-term
             reflex
             resourcet
             sdl2
