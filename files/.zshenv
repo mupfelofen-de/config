@@ -2,6 +2,9 @@
 
 export ALTERNATE_EDITOR=""
 export BROWSER="firefox"
+export CHICKEN_DOC_REPOSITORY=~/.chicken/chicken-doc
+export CHICKEN_INSTALL_PREFIX=~/.chicken
+export CHICKEN_REPOSITORY=~/.chicken/eggs
 export EDITOR="emacsclient -c -q"
 export EMAIL="Ertugrul Söylemez <esz@posteo.de>"
 export LANG=en_GB.UTF-8

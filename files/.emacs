@@ -133,6 +133,8 @@
  '(font-latex-fontify-sectioning 1.0)
  '(font-latex-script-display (quote (nil)))
  '(font-lock-maximum-size 1048576)
+ '(geiser-active-implementations (quote (chicken)))
+ '(geiser-guile-load-path (quote (".")))
  '(geiser-guile-manual-lookup-nodes (quote ("Guile" "guile-2.0" "guile")))
  '(global-font-lock-mode t nil (font-lock))
  '(gnus-inhibit-images t)
@@ -155,7 +157,12 @@ import qualified Data.HashMap.Strict as Mh
      ("Mi" . "import Data.IntMap.Strict (IntMap)
 import qualified Data.IntMap.Strict as Mi
 ")
-     ("V" . "import Data.Vector.Generic (Mutable, Vector)
+     ("T" . "import Data.Text (Text)
+import qualified Data.Text as T
+")
+     ("Tl" . "import qualified Data.Text.Lazy as Tl
+")
+     ("V" . "import Data.Vector.Generic (Vector)
 import qualified Data.Vector.Generic as V
 ")
      ("Vb" . "import qualified Data.Vector as Vb
@@ -197,7 +204,7 @@ import qualified Data.IntSet as Si
     ("--ghc-option=-fdefer-typed-holes" "--ghc-option=-ferror-spans" "--ghc-option=-ignore-dot-ghci")))
  '(haskell-process-args-ghci
    (quote
-    ("-Wall" "-Wno-type-defaults" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci")))
+    ("-Wall" "-Wno-type-defaults" "-Wno-unused-do-bind" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci")))
  '(haskell-process-path-cabal "nix-cabal")
  '(haskell-process-path-ghci "nix-ghci")
  '(haskell-process-prompt-restart-on-cabal-change nil)
@@ -235,6 +242,7 @@ import qualified Data.IntSet as Si
  '(ledger-use-iso-dates t)
  '(list-directory-verbose-switches "-lh")
  '(ls-lisp-dirs-first t)
+ '(magit-diff-arguments (quote ("--stat" "--stat-width=200" "--no-ext-diff")))
  '(mail-envelope-from (quote header))
  '(mail-specify-envelope-from t)
  '(markdown-asymmetric-header t)
@@ -298,7 +306,7 @@ import qualified Data.IntSet as Si
    (quote
     (("a" "Appointment" entry
       (file+datetree+prompt "~/org/app.org")
-      "* %T %?
+      "* APP %T %?
 Erstellt: %<%a, %F %T>" :prepend t :empty-lines-after 1)
      ("n" "Note" entry
       (file+olp "~/org/notes.org" "Notizen")
