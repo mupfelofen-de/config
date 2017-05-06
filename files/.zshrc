@@ -4,13 +4,14 @@ alias cp='cp -i --reflink=auto'
 alias defrag='btrfs filesystem defragment -r -t1g'
 alias df='df -Th'
 alias egrep='egrep --color=auto'
-alias em=$EDITOR
+alias em='emacsclient -c -n -q'
 alias files='tmsu files'
 alias gp='gp -q'
 alias grep='grep --color=auto'
 alias ls='ls -lh --color=auto --group-directories-first --quoting-style=literal --show-control-chars'
 alias m='mpv'
-alias mlf='mpv --really-quiet --loop-file=inf'
+alias ml='mpv --loop-file=inf'
+alias mlq='mpv --really-quiet --loop-file=inf'
 alias mv='mv -iv'
 alias myt='mpv --ytdl'
 alias qmv='qmv -o tabsize=4'
@@ -44,10 +45,11 @@ chpwd() {
     fi
 }
 
-command_not_found_handler() {
-    command-not-found $*
-    true
-}
+if whence command-not-found > /dev/null; then
+    command_not_found_handler() {
+        command command-not-found $*
+    }
+fi
 
 nohist() {
     unset HISTFILE
