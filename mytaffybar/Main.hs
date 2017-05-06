@@ -30,6 +30,7 @@ main = do
           endWidgets   =
               [ textClockNew Nothing "%a %m-%d %T" 1,
                 systrayNew,
+                textBatteryNew "($time$)" 1,
                 batteryBarNew defaultBatteryConfig 1,
                 textMemoryMonitorNew "$rest$" 5,
                 textCpuMonitorNew "$total$" 5 ],
