@@ -31,12 +31,22 @@ for n in $*; do
         phobos-beamer)
             xrandr \
                 --output eDP1 --auto \
-                --output DP1 --auto --same-as eDP1 --scale-from 1920x1080 \
+                --output DP1 --off \
+                --output DP2 --off \
+                --output HDMI1 --auto --same-as eDP1 \
+                --output HDMI2 --off \
+                --output VIRTUAL1 --off
+            xmodmap_defs+=("-DMOBILE")
+            ;;
+
+        phobos-free)
+            xrandr \
+                --output eDP1 --off \
+                --output DP1 --auto \
                 --output DP2 --off \
                 --output HDMI1 --off \
                 --output HDMI2 --off \
                 --output VIRTUAL1 --off
-            xmodmap_defs+=("-DMOBILE")
             ;;
 
         phobos-home)

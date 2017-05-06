@@ -76,6 +76,7 @@ main = xmonad (cfg `additionalKeysP` keys)
           ("M-<Return>", swapNextScreen),
 
           ("M-o b", spawn "switch-display.sh beamer"),
+          ("M-o f", spawn "switch-display.sh free"),
           ("M-o h", spawn "switch-display.sh home"),
           ("M-o m", spawn "switch-display.sh mobile"),
           ("M-o o", spawn "switch-display.sh"),
