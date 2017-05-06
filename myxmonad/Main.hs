@@ -29,9 +29,9 @@ import XMonad.Util.XSelection
 
 
 main :: IO ()
-main = xmonad (cfg `additionalKeysP` keys)
+main = xmonad (docks (cfg `additionalKeysP` myKeys))
     where
-    keys =
+    myKeys =
         [ -- Switch workspaces
           ("M-<F1>", gotoGroup "work"),
           ("M-<F2>", gotoGroup "text"),
@@ -162,7 +162,6 @@ main = xmonad (cfg `additionalKeysP` keys)
                 (className =? "mpv"   --> doFloat) <>
                 (className =? "URxvt" --> insertPosition Below Newer) <>
                 (isFullscreen         --> doFullFloat) <>
-                manageDocks <>
                 manageHook myDef,
 
             -- Appearance
