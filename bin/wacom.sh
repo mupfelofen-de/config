@@ -5,15 +5,14 @@ case $HOST in
     phobos)
         setpen()    { xsetwacom set "Wacom BambooPT 2FG Small Pen stylus" $* }
         seteraser() { xsetwacom set "Wacom BambooPT 2FG Small Pen eraser" $* }
-        settouch()  { xsetwacom set "Wacom BambooPT 2FG Small Finger touch" $* }
         setpad()    { xsetwacom set "Wacom BambooPT 2FG Small Pad pad" $* }
+        xinput disable "$(xinput list --id-only "Wacom BambooPT 2FG Small Finger")"
         ;;
 
     *)
         setpen()    {}
         seteraser() {}
         settouch()  {}
-        setpad()    {}
 
 esac
 
@@ -35,5 +34,4 @@ seteraser Suppress "2"
 seteraser TapTime "250"
 seteraser Threshold "500"
 
-setpad Touch "off"
-settouch Touch "off"
+setpad "Touch" off

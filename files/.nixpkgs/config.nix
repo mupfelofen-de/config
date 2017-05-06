@@ -163,6 +163,7 @@ nixos : {
                 xlibs.xev
                 xlibs.xmodmap
                 xlibs.xwininfo
+                xorg.xinput
                 xtrlock-pam
                 youtube-dl
                 zathura
