@@ -39,8 +39,8 @@ nixos : {
                 sha256 = "0am4d5s1y00066yz89lp1vxwz2kfs58b3harqn4vpas199lklj8w";
             };
             reflex = asGit <ertes-src/reflex> {
-                rev = "d78ba4318c425ca9b942dc387d7c5c7ab2d2e095";
-                sha256 = "10sryvwdf88ajkp35yma8llkb38cp63vjr5mq2hba4s2d8yg649q";
+                rev = "de4861c9e3307ca3fcfadf3f576e4896e9f1ad16";
+                sha256 = "0flvsgpfdppmbhmahl1b0rmriiwf7q9rymwmfi4rm7ys7m8xq1h3";
             };
             wires = asGit <ertes-src/wires> {
                 rev = "53ad7aae155d420f3de7bd7222fe13f05fe13110";
@@ -137,12 +137,12 @@ nixos : {
                 gimp
                 glxinfo
                 gmrun
-                gnome3.gnome-chess
+                # gnome3.gnome-chess
+                gucharmap
                 haskellPackages.mytaffybar
                 haskellPackages.myxmonad
                 inkscape
                 jmtpfs
-                kde4.kcharselect
                 kid3
                 ledger
                 mpc_cli
@@ -202,7 +202,7 @@ nixos : {
             random
             rapid
             rapid-term
-            reflex
+            # reflex
             resourcet
             sdl2
             smallcheck
