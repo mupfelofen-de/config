@@ -1,7 +1,7 @@
 ; -*-emacs-lisp-*-
 
 (add-to-list 'load-path "~/cfg/my/emacs")
-(add-to-list 'load-path "~/.nix-profile/share/x86_64-linux-ghc-8.0.1/Agda-2.5.1.1/emacs-mode")
+(add-to-list 'load-path "~/.nix-profile/share/x86_64-linux-ghc-8.0.2/Agda-2.5.2/emacs-mode")
 
 (setq package-user-dir "~/.nix-profile/share/emacs/site-lisp/elpa")
 (package-initialize)
