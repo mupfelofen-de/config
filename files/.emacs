@@ -6,6 +6,8 @@
 (setq package-user-dir "~/.nix-profile/share/emacs/site-lisp/elpa")
 (package-initialize)
 
+(load "ProofGeneral/generic/proof-site")
+
 (require 'agda2 nil t)
 (require 'calc)
 (require 'dired-x)
@@ -374,6 +376,7 @@ Erstellt: %U" :prepend t))))
  '(pc-select-override-scroll-error t)
  '(pc-select-selection-keys-only t)
  '(pc-selection-mode t)
+ '(proof-splash-enable nil)
  '(read-quoted-char-radix 10)
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode (quote right))
