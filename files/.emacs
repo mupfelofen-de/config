@@ -17,6 +17,7 @@
 (require 'nxml-mode)
 (require 'yasnippet)
 
+(load "ertes-cmd")
 (load "ertes-edit")
 (load "ertes-haskell")
 (load "ertes-ledger")
