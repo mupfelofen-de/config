@@ -27,20 +27,20 @@ nixos : {
                 sha256 = "1bj073phaij38b057adsgqbvqr2lvv99vicxixmysvj8r4gnz57l";
             };
             progress-meter = asGit <ertes-src/progress-meter> {
-                rev = "refs/tags/v0.1.0";
-                sha256 = "0mzal1bbyww1a8qnhp6y69mbbx04filk29l00348q465bz0zd9k9";
+                rev = "refs/heads/master";
+                sha256 = "10mbbaav7ffn956rpcyfd2fym4mdk5sq6vq5gpakxr1r07k4ajbq";
             };
             rapid = asGit <ertes-src/rapid> {
                 rev = "e3a1ead573e4aca23a1ff55810c69cecf10e2331";
                 sha256 = "1pga5flvkqyin71zmlxf2v4farg0mi0i60f6znmi9217zihrr4p5";
             };
             rapid-term = asGit <ertes-src/rapid-term> {
-                rev = "15101bdd357c89c5f15c7a0c74a26225379cfa2b";
-                sha256 = "0am4d5s1y00066yz89lp1vxwz2kfs58b3harqn4vpas199lklj8w";
+                rev = "refs/heads/master";
+                sha256 = "131bgcn0jpm7v924vfqyxfa8ls68ni52a4rpja0rcbxy2b02yrmr";
             };
             reflex = asGit <ertes-src/reflex> {
-                rev = "de4861c9e3307ca3fcfadf3f576e4896e9f1ad16";
-                sha256 = "0flvsgpfdppmbhmahl1b0rmriiwf7q9rymwmfi4rm7ys7m8xq1h3";
+                rev = "refs/heads/develop";
+                sha256 = "1835njkbrv7mbqa000zldhfvi9zhz5ic83s92nb9s83w19cxxps3";
             };
             wires = asGit <ertes-src/wires> {
                 rev = "53ad7aae155d420f3de7bd7222fe13f05fe13110";
@@ -53,21 +53,32 @@ nixos : {
         ertes-base = super.buildEnv {
             name = "ertes-base";
             paths = with self; [
+                aircrack-ng
+                bedup
                 cacert
                 connect
                 curl
                 darcs
                 dict
                 emacs
+                emacsPackages.darcsum
+                emacsPackages.org
+                emacsPackages.proofgeneral
                 emacsPackagesNg.geiser
                 emacsPackagesNg.haskell-mode
                 emacsPackagesNg.magit
                 emacsPackagesNg.markdown-mode
-                emacsPackagesNg.org
                 emacsPackagesNg.paredit
                 emacsPackagesNg.yaml-mode
                 emacsPackagesNg.yasnippet
+
+                emacsPackagesNg.company
+                emacsPackagesNg.dash-functional
+                emacsPackagesNg.f
+                emacsPackagesNg.flycheck
+
                 execline
+                fdupes
                 file
                 fortune
                 gcc
@@ -77,20 +88,24 @@ nixos : {
                 gnupg
                 gptfdisk
                 graphicsmagick
+                iotop
                 isync
+                iw
+                jq
                 lftp
                 libressl
                 llvm
                 lm_sensors
                 manpages
                 mkpasswd
-                msmtp
                 nix-repl
                 nmap
                 notmuch
                 p7zip
+                pciutils
                 pari-unstable
                 posix_man_pages
+                rfkill
                 psmisc
                 pv
                 pwgen
@@ -98,11 +113,17 @@ nixos : {
                 s6
                 screen
                 smartmontools
+                speedtest-cli
                 sqlite
                 sshfsFuse
+                tcpdump
+                termdown
                 unzip
+                usbutils
                 vmtouch
                 wget
+                whois
+                wirelesstools
                 zip
             ];
         };
@@ -110,8 +131,8 @@ nixos : {
         ertes-dev = super.buildEnv {
             name = "ertes-dev";
             paths = with self; [
-                AgdaStdlib
                 cabal2nix
+                coq
                 ghc-env
                 ghostscript
                 gnuplot
@@ -127,17 +148,17 @@ nixos : {
                 audacity
                 beets
                 blender
+                chocolateDoom
                 compton-git
                 disk_indicator
                 feh
                 ffmpeg
-                firefox
+                firefox-esr
                 gajim
                 geeqie
                 gimp
                 glxinfo
                 gmrun
-                # gnome3.gnome-chess
                 gucharmap
                 haskellPackages.mytaffybar
                 haskellPackages.myxmonad
@@ -149,6 +170,7 @@ nixos : {
                 mpd
                 mpv
                 ncmpc
+                palemoon
                 pavucontrol
                 redshift
                 rxvt_unicode
@@ -157,6 +179,7 @@ nixos : {
                 t
                 torbrowser
                 transmission
+                transmission-remote-cli
                 unclutter
                 xclip
                 xlibs.xbacklight
@@ -178,22 +201,29 @@ nixos : {
 
         ghc-env = super.haskellPackages.ghcWithPackages (p: with p; [
             ad
-            Agda
             arithmoi
             async
+            base16-bytestring
+            base64-bytestring
             cabal-install
             clock
             comonad
             criterion
+            cryptonite
+            exceptions
             fingertree
             free
             generic-deriving
             ghc-datasize
+            gl
             hasktags
             hscolour
+            http-conduit
             kan-extensions
             lens
+            lens-aeson
             linear
+            machines
             megaparsec
             mwc-random
             network
@@ -208,7 +238,7 @@ nixos : {
             smallcheck
             sqlite-simple
             stm
-            Stream
+            streams
             text
             vector
             wires
