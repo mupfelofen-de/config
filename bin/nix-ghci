@@ -27,4 +27,4 @@ done
 flags=`grep -Pio "(?<=hs-source-dirs:).*" $cabal_file | sed -re "s/[a-zA-Z_-]+/-i&/g" | tr -s "\n " " "`
 
 #exec nix-shell `pwd`/dist/shell.drv -Q --pure --command "exec bash $args"
-exec nix-shell shell.nix -Q --pure --command "exec ghci $flags $args"
+exec nix-shell shell.nix -Q --command "exec ghci $flags $args"
