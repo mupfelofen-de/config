@@ -5,6 +5,9 @@ audio-channels=2
 autofit=50%
 cache-default=1048576
 no-ytdl
+slang=en,eng,de,deu,ger
 vo=opengl
 x11-netwm=yes
-ytdl-format=bestvideo[height<=720]+bestaudio/best
+# ytdl-format=bestvideo[height<=720]+bestaudio/best
+# ytdl-format=bestvideo+bestaudio/best
+ytdl-format=best

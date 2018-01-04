@@ -24,7 +24,11 @@ URxvt.boldItalicFont: xft:DejaVu Sans Mono:pixelsize=18:italic,-misc-fixed-bold-
 URxvt.keysym.M-C-1: command:\033]710;xft:DejaVu Sans Mono:pixelsize=15\007\033]711;xft:DejaVu Sans Mono:pixelsize=15:bold\007
 URxvt.keysym.M-C-2: command:\033]710;xft:DejaVu Sans Mono:pixelsize=18\007\033]711;xft:DejaVu Sans Mono:pixelsize=18:bold\007
 URxvt.keysym.M-C-3: command:\033]710;xft:DejaVu Sans Mono:pixelsize=28\007\033]711;xft:DejaVu Sans Mono:pixelsize=28:bold\007
-URxvt.keysym.M-C-4: command:\033]11;[70]#104\302\234\033]708;[70]#104\302\234
+URxvt.keysym.M-C-4: command:\033]11;[70]#203\302\234\033]708;[70]#203\302\234
+URxvt.keysym.M-C-5: command:\033]11;[70]#310\302\234\033]708;[70]#310\302\234
+URxvt.keysym.M-C-6: command:\033]11;[70]#130\302\234\033]708;[70]#130\302\234
+URxvt.keysym.M-C-7: command:\033]11;[70]#400\302\234\033]708;[70]#400\302\234
+URxvt.keysym.M-C-8: command:\033]11;[70]#000\302\234\033]708;[70]#000\302\234
 
 ! behaviour
 URxvt.cutchars:         "`\"\'&()*,;@<=>?[]{|}"

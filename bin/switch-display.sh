@@ -42,7 +42,7 @@ for n in $*; do
         phobos-free)
             xrandr \
                 --output eDP1 --off \
-                --output DP1 --auto \
+                --output DP1 --auto --mode 1872x1050_60.00 \
                 --output DP2 --off \
                 --output HDMI1 --off \
                 --output HDMI2 --off \
@@ -51,8 +51,8 @@ for n in $*; do
 
         phobos-home)
             xrandr \
-                --output eDP1 --auto \
-                --output DP1 --auto --left-of eDP1 \
+                --output eDP1 --auto --primary \
+                --output DP1 --auto --left-of eDP1 --mode 1872x1050_60.00 \
                 --output DP2 --off \
                 --output HDMI1 --off \
                 --output HDMI2 --off \

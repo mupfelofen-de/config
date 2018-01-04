@@ -1,6 +1,9 @@
 #! /run/current-system/sw/bin/zsh -l
 
-switch-display.sh
+xrandr --newmode 1872x1050_60.00 163.00  1872 1992 2184 2496  1050 1053 1063 1089 -hsync +vsync
+xrandr --addmode DP1 1872x1050_60.00
+
+switch-display.sh mobile
 
 setopt no_bg_nice
 
