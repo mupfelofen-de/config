@@ -103,7 +103,7 @@ nixos : {
                 notmuch
                 p7zip
                 pciutils
-                pari-unstable
+                pari
                 posix_man_pages
                 rfkill
                 psmisc
