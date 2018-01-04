@@ -97,13 +97,13 @@ main = xmonad (docks (cfg `additionalKeysP` myKeys))
           -- Applications
           ("M-c c", asks (terminal . config) >>= spawn),
           ("M-c e", spawn "emacsclient -c"),
-          ("M-c f", spawn "firefox"),
-          ("M-c p", spawn "firefox --private-window"),
+          ("M-c f", spawn "palemoon"),
+          ("M-c p", spawn "palemoon --private-window"),
           ("M-c s", addWorkspace "mail-1"),
           ("M-c t", spawn "mytaffybar"),
           ("M-c r", spawn "gmrun"),
 
-          ("M-c S-f", safePromptSelection "firefox"),
+          ("M-c S-f", safePromptSelection "palemoon"),
 
           ("M-<KP_Home>", scrMoveTo 0 0),   ("M-<KP_Up>",    scrMoveTo 0.5 0),   ("M-<KP_Page_Up>",   scrMoveTo 1 0),
           ("M-<KP_Left>", scrMoveTo 0 0.5), ("M-<KP_Begin>", scrMoveTo 0.5 0.5), ("M-<KP_Right>",     scrMoveTo 1 0.5),

@@ -1,7 +1,7 @@
 #! /usr/bin/env zsh
 
 export ALTERNATE_EDITOR=""
-export BROWSER="firefox"
+export BROWSER="palemoon"
 export CHICKEN_DOC_REPOSITORY=~/.chicken/chicken-doc
 export CHICKEN_INSTALL_PREFIX=~/.chicken
 export CHICKEN_REPOSITORY=~/.chicken/eggs
