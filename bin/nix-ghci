@@ -5,7 +5,18 @@ setopt null_glob
 
 cabal_file=(*.cabal)
 if [[ ! -f $cabal_file ]]; then
-    exec ghci $*
+    if [[ -f ghc.nix ]]; then
+        cmd=("exec" "ghci" "${(q)@}")
+        exec nix-shell -E -Q --command "$cmd" '
+            let pkgs = import <nixpkgs> {};
+                ghc = import ./ghc.nix { inherit pkgs; };
+            in pkgs.stdenv.mkDerivation {
+                name = "ghc-bogus";
+                buildInputs = [ghc];
+            }'
+    else
+        exec ghci $*
+    fi
 fi
 
 
