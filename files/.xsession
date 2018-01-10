@@ -1,7 +1,10 @@
 #! /run/current-system/sw/bin/zsh -l
 
-xrandr --newmode 1872x1050_60.00 163.00  1872 1992 2184 2496  1050 1053 1063 1089 -hsync +vsync
-xrandr --addmode DP1 1872x1050_60.00
+case "`hostname`" in
+    phobos)
+        xrandr --newmode 1872x1050_60.00 163.00  1872 1992 2184 2496  1050 1053 1063 1089 -hsync +vsync
+        xrandr --addmode DP1 1872x1050_60.00;;
+esac
 
 switch-display.sh mobile
 
