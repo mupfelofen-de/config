@@ -4,6 +4,10 @@
 ! Modifiers
 keycode 108 = Mode_switch
 
+! Apple keyboard
+! keycode 49 = U003C U003E U007C U21D0
+! keycode 94 = U005E U00B0 U2191 U2193
+
 
 ! 1 2 3
 keycode 49 = U005E U00B0 U2191 U2193
