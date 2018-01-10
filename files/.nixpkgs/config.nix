@@ -209,7 +209,7 @@ nixos : {
                 pkgs = self;
             };
 
-        ghc-env = super.haskellPackages.ghcWithPackages (p: with p; [
+        ghc-env = self.haskellPackages.ghcWithPackages (p: with p; [
             ad
             arithmoi
             async
@@ -251,7 +251,7 @@ nixos : {
             streams
             text
             vector
-            wires
+            # wires
         ]);
 
         ghcjs-env = super.haskell.packages.ghcjs.ghcWithPackages (p: with p; [
