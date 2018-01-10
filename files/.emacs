@@ -24,6 +24,7 @@
 (load "ertes-mail")
 (load "ertes-org")
 (load "ertes-paredit")
+(load "ertes-python")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -378,6 +379,7 @@ Erstellt: %U" :prepend t))))
  '(pc-select-selection-keys-only t)
  '(pc-selection-mode t)
  '(proof-splash-enable nil)
+ '(python-shell-interpreter "nix-python")
  '(read-quoted-char-radix 10)
  '(save-place-mode t nil (saveplace))
  '(scroll-bar-mode (quote right))

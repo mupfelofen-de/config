@@ -138,6 +138,8 @@ nixos : {
                 gnuplot
                 maxima
                 pandoc
+                pypi2nix
+                python-env
                 texlive.combined.scheme-basic
             ];
         };
@@ -250,6 +252,11 @@ nixos : {
             reflex-dom
             text
             vector
+        ]);
+
+        python-env = super.python3.withPackages(p: with p; [
+            pyrsistent
+            requests
         ]);
     };
 }
