@@ -10,8 +10,4 @@
 
 #+OPTIONS: ':t -:t tags:nil toc:nil todo:nil
 #+STARTUP: content
-#+TODO: TODO(t) REVISE(r@) | DONE(d!)
-
-#+LATEX_CLASS: textonly
-#+LATEX_HEADER_EXTRA: \usepackage[ngerman]{babel}
 

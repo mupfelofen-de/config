@@ -66,6 +66,7 @@ nixos : {
                 emacsPackages.proofgeneral
                 emacsPackagesNg.geiser
                 emacsPackagesNg.haskell-mode
+                emacsPackagesNg.jq-mode
                 emacsPackagesNg.magit
                 emacsPackagesNg.markdown-mode
                 emacsPackagesNg.paredit
@@ -76,6 +77,11 @@ nixos : {
                 emacsPackagesNg.dash-functional
                 emacsPackagesNg.f
                 emacsPackagesNg.flycheck
+
+                # emacsPackagesNg.dash
+                # emacsPackagesNg.let-alist
+                # emacsPackagesNg.s
+                # emacsPackagesNg.seq
 
                 execline
                 fdupes

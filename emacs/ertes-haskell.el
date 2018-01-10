@@ -92,6 +92,7 @@
   (define-key haskell-mode-map (kbd "C-c m") 'ertes-haskell-run-devel)
   (define-key haskell-mode-map (kbd "C-c R") 'haskell-process-restart)
   (define-key haskell-mode-map (kbd "C-c r") 'ertes-haskell-return)
+  (define-key haskell-mode-map (kbd "C-c t") 'haskell-mode-show-type-at)
   (define-key haskell-mode-map (kbd "M-.") 'haskell-mode-jump-to-def-or-tag)
 
   (define-key haskell-cabal-mode-map (kbd "C-<down>") 'forward-paragraph)
