@@ -209,7 +209,7 @@ import qualified Data.IntSet as Si
     ("--ghc-option=-fdefer-typed-holes" "--ghc-option=-ferror-spans" "--ghc-option=-ignore-dot-ghci")))
  '(haskell-process-args-ghci
    (quote
-    ("-Wall" "-Wno-type-defaults" "-Wno-unused-do-bind" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci")))
+    ("-Wall" "-Wno-type-defaults" "-Wno-unused-do-bind" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci" "-fshow-loaded-modules")))
  '(haskell-process-path-cabal "nix-cabal")
  '(haskell-process-path-ghci "nix-ghci")
  '(haskell-process-prompt-restart-on-cabal-change nil)
