@@ -1,6 +1,7 @@
 #! /usr/bin/env zsh
 
 alias cp='cp -i --reflink=auto'
+alias dd='dd status=progress bs=1M'
 alias defrag='btrfs filesystem defragment -r -t1g'
 alias df='df -Th'
 alias egrep='egrep --color=auto'
