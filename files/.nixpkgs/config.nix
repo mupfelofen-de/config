@@ -50,6 +50,8 @@ nixos : {
 
     packageOverrides = super: let self = super.pkgs; in {
 
+        busybox = super.busybox.override { enableStatic = true; useMusl = true; };
+
         ertes-base = super.buildEnv {
             name = "ertes-base";
             paths = with self; [
@@ -108,8 +110,8 @@ nixos : {
                 nmap
                 notmuch
                 p7zip
-                pciutils
                 pari
+                pciutils
                 posix_man_pages
                 rfkill
                 psmisc
