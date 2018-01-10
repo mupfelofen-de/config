@@ -2,7 +2,7 @@
 (defun gp ()
   "Start GP"
   (interactive)
-  (switch-to-buffer (make-comint "gp" "gp" nil "-q")))
+  (switch-to-buffer (make-comint "gp" "gp" nil "-q" "--emacs")))
 
 (defun sqlite (fp)
   "Start sqlite with the given file."
