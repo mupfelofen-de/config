@@ -211,6 +211,7 @@ nixos : {
 
         ghc-env = self.haskellPackages.ghcWithPackages (p: with p; [
             ad
+            aeson
             arithmoi
             async
             base16-bytestring
@@ -239,13 +240,13 @@ nixos : {
             network
             pipes
             progress-meter
+            QuickCheck
             random
             rapid
             rapid-term
             # reflex
             resourcet
             sdl2
-            smallcheck
             sqlite-simple
             stm
             streams
