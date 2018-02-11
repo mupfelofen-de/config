@@ -42,6 +42,8 @@
  '(blink-cursor-blinks 500)
  '(blink-cursor-interval 0.3)
  '(blink-cursor-mode t)
+ '(browse-url-firefox-new-window-is-tab t)
+ '(browse-url-firefox-program "palemoon")
  '(c-basic-offset 4)
  '(c-offsets-alist
    (quote
