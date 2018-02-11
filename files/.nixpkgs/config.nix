@@ -31,8 +31,8 @@ nixos : {
                 sha256 = "10mbbaav7ffn956rpcyfd2fym4mdk5sq6vq5gpakxr1r07k4ajbq";
             };
             rapid = asGit <ertes-src/rapid> {
-                rev = "e3a1ead573e4aca23a1ff55810c69cecf10e2331";
-                sha256 = "1pga5flvkqyin71zmlxf2v4farg0mi0i60f6znmi9217zihrr4p5";
+                rev = "refs/heads/master";
+                sha256 = "1jkr26cpxhdjszwpcilzxaqfqy3ffmbbjaq3181s40m9grjx2s24";
             };
             rapid-term = asGit <ertes-src/rapid-term> {
                 rev = "refs/heads/master";
