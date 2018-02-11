@@ -16,13 +16,10 @@ export NCURSES_ASSUMED_COLORS="7,-1"
 export NIX_PAGER="cat"
 export PAGER="less"
 
-# if [[ $USER@$HOST == "never@deimos" ]]; then
-#     NIX_PATH="/nix/var/nix/profiles/per-user/never/channels/nixos"
-#     NIX_PATH+=":nixpkgs=/nix/var/nix/profiles/per-user/never/channels/nixos/nixpkgs"
-#     NIX_PATH+=":nixos-config=/etc/nixos/configuration.nix"
+NIX_PATH="nixpkgs=/nix/var/nix/profiles/per-user/never/channels/nixos/nixpkgs"
+NIX_PATH+=":nixos-config=/etc/nixos/configuration.nix"
+NIX_PATH+=":/nix/var/nix/profiles/per-user/root/channels"
 NIX_PATH+=":ertes-src=$HOME/src"
-#     export NIX_PATH
-# fi
 
 path=(${path:#/run/current-system/sw/bin})
 path+=(/run/current-system/sw/bin)
