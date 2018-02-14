@@ -5,6 +5,7 @@ export BROWSER="palemoon"
 export CHICKEN_DOC_REPOSITORY=~/.chicken/chicken-doc
 export CHICKEN_INSTALL_PREFIX=~/.chicken
 export CHICKEN_REPOSITORY=~/.chicken/eggs
+export COPYRIGHT="2018 Ertugrul Söylemez"
 export EDITOR="emacsclient -c -q"
 export EMAIL="Ertugrul Söylemez <esz@posteo.de>"
 export LANG=en_GB.UTF-8

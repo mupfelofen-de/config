@@ -2,9 +2,9 @@
 # name: mod
 # key: mod
 # --
--- Copyright:  (c) 2018 Ertugrul Söylemez
+-- Copyright:  `(getenv "COPYRIGHT")`
 -- License:    BSD3
--- Maintainer: Ertugrul Söylemez <esz@posteo.de>
+-- Maintainer: `(getenv "EMAIL")`
 
 module $1 where
 

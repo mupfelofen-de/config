@@ -5,7 +5,7 @@
 
 #+TITLE: $1
 #+AUTHOR: Ertugrul Söylemez
-#+EMAIL: esz@posteo.de
+#+EMAIL: `(getenv "EMAIL")`
 #+LANGUAGE: de
 
 #+OPTIONS: ':t -:t tags:nil toc:nil todo:nil
