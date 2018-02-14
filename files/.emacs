@@ -75,6 +75,7 @@
       ("\\diamond" "\\delta" "\\Delta")))))
  '(colon-double-space t)
  '(column-number-mode t)
+ '(comint-scroll-show-maximum-output nil)
  '(compilation-ask-about-save nil)
  '(compilation-read-command nil)
  '(compilation-scroll-output t)
