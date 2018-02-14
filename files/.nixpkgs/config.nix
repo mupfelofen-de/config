@@ -145,9 +145,10 @@ nixos : {
                 ghostscript
                 gnuplot
                 maxima
+                nix-prefetch-git
                 pandoc
                 pypi2nix
-                python-env
+                python3-env
                 texlive.combined.scheme-basic
             ];
         };
@@ -246,6 +247,7 @@ nixos : {
             rapid-term
             # reflex
             resourcet
+            scotty
             sdl2
             sqlite-simple
             stm
@@ -263,7 +265,7 @@ nixos : {
             vector
         ]);
 
-        python-env = super.python3.withPackages(p: with p; [
+        python3-env = super.python3.withPackages (p: with p; [
             pyrsistent
             requests
         ]);
