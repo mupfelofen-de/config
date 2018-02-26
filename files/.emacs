@@ -220,7 +220,6 @@ import qualified Data.IntSet as Si
  '(haskell-process-suggest-language-pragmas nil)
  '(haskell-process-suggest-overloaded-strings nil)
  '(haskell-process-type (quote ghci))
- '(haskell-tags-on-save t)
  '(ibuffer-expert t)
  '(ibuffer-never-show-predicates
    (quote
