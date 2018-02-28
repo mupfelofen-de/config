@@ -36,7 +36,7 @@ nixos : {
             };
             rapid-term = asGit <ertes-src/rapid-term> {
                 rev = "refs/heads/master";
-                sha256 = "131bgcn0jpm7v924vfqyxfa8ls68ni52a4rpja0rcbxy2b02yrmr";
+                sha256 = "1z0da3i3myw8zjnh5cn7ka6l1hq8rikhwdjrks484ibqp895d51l";
             };
             reflex = asGit <ertes-src/reflex> {
                 rev = "refs/heads/develop";
