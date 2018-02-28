@@ -151,10 +151,18 @@
  '(haskell-doc-show-reserved nil)
  '(haskell-import-mapping
    (quote
-    (("B" . "import Data.ByteString (ByteString)
+    (("Applicative" . "import Control.Applicative
+")
+     ("B" . "import Data.ByteString (ByteString)
 import qualified Data.ByteString as B
 ")
      ("Bl" . "import qualified Data.ByteString.Lazy as Bl
+")
+     ("Codensity" . "import Control.Monad.Codensity
+")
+     ("Foldable" . "import Data.Foldable
+")
+     ("IO" . "import Control.Monad.IO.Class
 ")
      ("M" . "import Data.Map.Strict (Map)
 import qualified Data.Map.Strict as M
@@ -165,10 +173,20 @@ import qualified Data.HashMap.Strict as Mh
      ("Mi" . "import Data.IntMap.Strict (IntMap)
 import qualified Data.IntMap.Strict as Mi
 ")
+     ("Monad" . "import Control.Monad
+")
+     ("Monoid" . "import Data.Monoid
+")
      ("T" . "import Data.Text (Text)
 import qualified Data.Text as T
+import qualified Data.Text.Encoding as T
+import qualified Data.Text.IO as T
 ")
      ("Tl" . "import qualified Data.Text.Lazy as Tl
+import qualified Data.Text.Lazy.Encoding as Tl
+import qualified Data.Text.Lazy.IO as Tl
+")
+     ("Traversable" . "import Data.Traversable
 ")
      ("V" . "import Data.Vector.Generic (Vector)
 import qualified Data.Vector.Generic as V
@@ -212,7 +230,7 @@ import qualified Data.IntSet as Si
     ("--ghc-option=-fdefer-typed-holes" "--ghc-option=-ferror-spans" "--ghc-option=-ignore-dot-ghci")))
  '(haskell-process-args-ghci
    (quote
-    ("-Wall" "-Wno-type-defaults" "-Wno-unused-do-bind" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci" "-fshow-loaded-modules")))
+    ("-DDEVEL" "-Wall" "-Wno-type-defaults" "-Wno-unused-do-bind" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci" "-fshow-loaded-modules")))
  '(haskell-process-path-cabal "nix-cabal")
  '(haskell-process-path-ghci "nix-ghci")
  '(haskell-process-prompt-restart-on-cabal-change nil)
