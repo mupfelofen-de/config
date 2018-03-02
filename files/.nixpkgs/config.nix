@@ -71,6 +71,7 @@ nixos : {
                 emacsPackagesNg.jq-mode
                 emacsPackagesNg.magit
                 emacsPackagesNg.markdown-mode
+                emacsPackagesNg.nix-mode
                 emacsPackagesNg.paredit
                 emacsPackagesNg.yaml-mode
                 emacsPackagesNg.yasnippet
