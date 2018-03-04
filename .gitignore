@@ -1,8 +1,9 @@
 .yas-compiled-snippets.el
-shell.nix
+/scripts/out
+/scripts/tmp
+/services/*/log/supervise
 /services/*/supervise
 /services/.s6-svscan/lock
 TAGS
-/scripts/out
-/scripts/tmp
 result
+shell.nix

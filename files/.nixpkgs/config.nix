@@ -114,6 +114,7 @@ nixos : {
                 pari
                 pciutils
                 posix_man_pages
+                postgresql100
                 rfkill
                 psmisc
                 pv
@@ -241,6 +242,7 @@ nixos : {
             mwc-random
             network
             pipes
+            postgresql-simple
             progress-meter
             QuickCheck
             random

@@ -1,0 +1,4 @@
+#! /bin/sh
+
+exec s6-log \
+    n16 s1048576 ~/log/postgres

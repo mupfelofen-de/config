@@ -1,0 +1,15 @@
+#! /bin/sh
+
+set -o errexit -o nounset
+
+export PGDATA=~/db/postgres
+
+if ! [[ -d $PGDATA ]]; then
+    initdb -E UTF-8 --no-locale
+
+    for n in ~/cfg/my/postgres/*; do
+        ln -sf $n $PGDATA
+    done
+fi
+
+exec postgres 2>&1
