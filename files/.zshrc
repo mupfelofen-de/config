@@ -1,6 +1,6 @@
 #! /usr/bin/env zsh
 
-alias adm='sudo /root/bin/adm.sh'
+alias adm='sudo /root/cfg/my/bin/adm'
 alias cp='cp -i --reflink=auto'
 alias dd='dd status=progress bs=1M'
 alias defrag='btrfs filesystem defragment -r -t1g'
