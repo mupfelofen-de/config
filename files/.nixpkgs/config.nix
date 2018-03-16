@@ -50,8 +50,6 @@ nixos : {
 
     packageOverrides = super: let self = super.pkgs; in {
 
-        busybox = super.busybox.override { enableStatic = true; useMusl = true; };
-
         ertes-base = super.buildEnv {
             name = "ertes-base";
             paths = with self; [
@@ -73,18 +71,14 @@ nixos : {
                 emacsPackagesNg.markdown-mode
                 emacsPackagesNg.nix-mode
                 emacsPackagesNg.paredit
+                emacsPackagesNg.php-eldoc
+                emacsPackagesNg.php-mode
+                emacsPackagesNg.restclient
                 emacsPackagesNg.yaml-mode
                 emacsPackagesNg.yasnippet
 
-                emacsPackagesNg.company
                 emacsPackagesNg.dash-functional
                 emacsPackagesNg.f
-                emacsPackagesNg.flycheck
-
-                # emacsPackagesNg.dash
-                # emacsPackagesNg.let-alist
-                # emacsPackagesNg.s
-                # emacsPackagesNg.seq
 
                 execline
                 fdupes
@@ -176,7 +170,6 @@ nixos : {
                 haskellPackages.mytaffybar
                 haskellPackages.myxmonad
                 inkscape
-                jmtpfs
                 kid3
                 ledger
                 mpc_cli
@@ -189,7 +182,6 @@ nixos : {
                 rxvt_unicode
                 scrot
                 syncthing
-                t
                 torbrowser
                 transmission
                 transmission-remote-cli
