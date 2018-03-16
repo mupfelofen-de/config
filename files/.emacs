@@ -18,6 +18,7 @@
 (require 'yasnippet)
 
 (load "ertes-cmd")
+(load "ertes-dired")
 (load "ertes-edit")
 (load "ertes-haskell")
 (load "ertes-ledger")
@@ -425,6 +426,7 @@ Erstellt: %U" :prepend t))))
  '(unibyte-display-via-language-environment nil)
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
  '(version-control t)
+ '(wdired-allow-to-change-permissions (quote advanced))
  '(yas-indent-line (quote fixed))
  '(yas-snippet-dirs (quote ("~/.emacs.d/snippets")) nil (yasnippet)))
 
