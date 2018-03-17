@@ -32,7 +32,7 @@ if [[ ! -f Setup ]] || [[ Setup.hs -nt Setup ]] || [[ Setup.lhs -nt Setup ]]; th
         echo "Neither Setup.hs nor Setup.lhs found" >&2
         exit 1
     fi
-    nix-shell shell.nix -Q --command "exec ghc -O -o Setup $setup_hs" > /dev/null
+    nix-shell shell.nix -Q --command "exec ghc -O -dynamic -o Setup $setup_hs" > /dev/null
     rm -f Setup.hi Setup.o
 fi
 
