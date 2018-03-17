@@ -37,7 +37,7 @@ if [[ ! -f Setup ]] || [[ Setup.hs -nt Setup ]] || [[ Setup.lhs -nt Setup ]]; th
 fi
 
 if [[ ! dist/setup-config -nt "$cf" ]]; then
-    nix-shell shell.nix -Q --command "exec ./Setup configure" > /dev/null
+    nix-shell shell.nix -Q --command "exec ./Setup configure --datadir=. --datasubdir=." > /dev/null
 fi
 
 cmd=("exec" "./Setup" "${(q)@}")
