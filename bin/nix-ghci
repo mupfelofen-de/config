@@ -1,32 +1,16 @@
 #! /usr/bin/env zsh
 
-setopt err_exit
-setopt null_glob
+set -o errexit -o nounset
 
-cabal_file=(*.cabal)
-if [[ ! -f $cabal_file ]]; then
-    if [[ -f ghc.nix ]]; then
-        cmd=("exec" "ghci" "${(q)@}")
-        exec nix-shell -E -Q --command "$cmd" '
-            let pkgs = import <nixpkgs> {};
-                ghc = import ./ghc.nix { inherit pkgs; };
-            in pkgs.stdenv.mkDerivation {
-                name = "ghc-bogus";
-                buildInputs = [ghc];
-            }'
-    else
-        exec ghci $*
-    fi
+if [[ -f ghc.nix ]]; then
+    cmd=("exec" "ghci" "${(q)@}")
+    exec nix-shell -E -Q --command "$cmd" '
+        let pkgs = import <nixpkgs> {};
+            ghc = import ./ghc.nix { inherit pkgs; };
+        in pkgs.stdenv.mkDerivation {
+            name = "ghc-bogus";
+            buildInputs = [ghc];
+        }'
+else
+    exec ghci "$@"
 fi
-
-
-[[ -f .no-cabal2nix || default.nix -nt $cabal_file ]] ||
-    cabal2nix . > default.nix
-
-[[ shell.nix -nt $cabal_file ]] ||
-    cabal2nix -fdevel -fexamples --shell . > shell.nix
-
-flags=`grep -Pio "(?<=hs-source-dirs:).*" $cabal_file | sed -re "s/[a-zA-Z_-]+/-i&/g" | tr -s "\n " " "`
-
-cmd=("exec" "ghci" "$flags" "${(q)@}")
-exec nix-shell shell.nix -Q --command "$cmd"
