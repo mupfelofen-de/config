@@ -1,0 +1,44 @@
+#! /usr/bin/env zsh
+
+set -o errexit -o nounset
+
+cf=(*.cabal)
+
+if [[ $cf == "*.cabal" ]]; then
+    echo "Cabal file missing" >&2
+    exit 1
+fi
+
+case ${#cf[@]} in
+    0) echo "Cabal file missing" >&2; exit 1;;
+    1) ;;
+    *) echo "Too many Cabal files" >&2; exit 1;;
+esac
+
+if [[ ! -f default.nix ]] || [[ "$cf" -nt default.nix ]]; then
+    cabal2nix . > default.nix
+fi
+
+if [[ ! -f shell.nix ]] || [[ "$cf" -nt shell.nix ]]; then
+    cabal2nix -fdevel -fexamples --shell . > shell.nix
+fi
+
+if [[ ! -f Setup ]] || [[ Setup.hs -nt Setup ]] || [[ Setup.lhs -nt Setup ]]; then
+    if [[ -f Setup.hs ]]; then
+        setup_hs=Setup.hs
+    elif [[ -f Setup.lhs ]]; then
+        setup_hs=Setup.lhs
+    else
+        echo "Neither Setup.hs nor Setup.lhs found" >&2
+        exit 1
+    fi
+    nix-shell shell.nix -Q --command "exec ghc -O -o Setup $setup_hs" > /dev/null
+    rm -f Setup.hi Setup.o
+fi
+
+if [[ ! dist/setup-config -nt "$cf" ]]; then
+    nix-shell shell.nix -Q --command "exec ./Setup configure" > /dev/null
+fi
+
+cmd=("exec" "./Setup" "${(q)@}")
+exec nix-shell shell.nix --command "$cmd"
