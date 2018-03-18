@@ -228,10 +228,10 @@ import qualified Data.IntSet as Si
  '(haskell-interactive-mode-scroll-to-bottom t)
  '(haskell-process-args-cabal-repl
    (quote
-    ("--ghc-option=-DDEVEL" "--ghc-option=-Wall" "--ghc-option=-Wno-type-defaults" "--ghc-option=-Wno-unused-do-bind" "--ghc-option=-XPartialTypeSignatures" "--ghc-option=-fdefer-typed-holes" "--ghc-option=-ferror-spans" "--ghc-option=-ignore-dot-ghci" "--ghc-option=-fshow-loaded-modules")))
+    ("--ghc-option=-Wall" "--ghc-option=-Wno-type-defaults" "--ghc-option=-Wno-unused-do-bind" "--ghc-option=-XPartialTypeSignatures" "--ghc-option=-fdefer-typed-holes" "--ghc-option=-ferror-spans" "--ghc-option=-ignore-dot-ghci" "--ghc-option=-fshow-loaded-modules")))
  '(haskell-process-args-ghci
    (quote
-    ("-DDEVEL" "-Wall" "-Wno-type-defaults" "-Wno-unused-do-bind" "-XPartialTypeSignatures" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci" "-fshow-loaded-modules")))
+    ("-Wall" "-Wno-type-defaults" "-Wno-unused-do-bind" "-XPartialTypeSignatures" "-fdefer-typed-holes" "-ferror-spans" "-ignore-dot-ghci" "-fshow-loaded-modules")))
  '(haskell-process-path-cabal "nix-cabal")
  '(haskell-process-path-ghci "nix-ghci")
  '(haskell-process-prompt-restart-on-cabal-change nil)
