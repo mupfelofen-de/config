@@ -495,6 +495,7 @@ Erstellt: %U" :prepend t))))
 (define-key calc-mode-map (kbd "C-<down>") 'calc-truncate-down)
 (define-key calc-mode-map (kbd "C-<up>") 'calc-truncate-up)
 
+(setq vc-handled-backends nil)
 (yas-global-mode 1)
 
 (with-demoted-errors "Unable to load ERC: %S"
