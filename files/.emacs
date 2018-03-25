@@ -161,9 +161,13 @@ import qualified Data.ByteString as B
 ")
      ("Codensity" . "import Control.Monad.Codensity
 ")
+     ("Ex" . "import Control.Exception
+")
      ("Foldable" . "import Data.Foldable
 ")
      ("IO" . "import Control.Monad.IO.Class
+")
+     ("J" . "import qualified Data.Aeson as J
 ")
      ("M" . "import Data.Map.Strict (Map)
 import qualified Data.Map.Strict as M
