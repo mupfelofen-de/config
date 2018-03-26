@@ -55,6 +55,7 @@ nixos : {
             paths = with self; [
                 aircrack-ng
                 bedup
+                btrbk
                 cacert
                 connect
                 curl
@@ -114,6 +115,7 @@ nixos : {
                 pv
                 pwgen
                 renameutils
+                rss2email
                 s6
                 screen
                 smartmontools
