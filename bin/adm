@@ -14,19 +14,20 @@ case "$HOSTNAME" in
 esac
 
 case "$*" in
-    "backup mount")
-        cd /root/backup
-        ./backup.sh -o
+    "backup close")
+        ~/cfg/my/bin/backup.sh close
+        ;;
+
+    "backup open")
+        ~/cfg/my/bin/backup.sh open
         ;;
 
     "backup run")
-        cd /root/backup
-        ./backup.sh -Sbd
+        ~/cfg/my/bin/backup.sh run
         ;;
 
-    "backup unmount")
-        cd /root/backup
-        ./backup.sh -c
+    "backup runi")
+        ~/cfg/my/bin/backup.sh runi
         ;;
 
     "dedup")
