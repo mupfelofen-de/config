@@ -28,6 +28,34 @@ for n in $*; do
             xmodmap_defs+=("-DMOBILE")
             ;;
 
+        elara-home)
+            xrandr \
+                --output DP1 --off \
+                --output eDP1 --auto --left-of HDMI1 \
+                --output HDMI1 --auto --mode 1920x1080 --primary \
+                --output HDMI2 --off \
+                --output VIRTUAL1 --off
+            ;;
+
+        elara-mobile)
+            xrandr \
+                --output DP1 --off \
+                --output eDP1 --auto --primary \
+                --output HDMI1 --off \
+                --output HDMI2 --off \
+                --output VIRTUAL1 --off
+            xmodmap_defs+=("-DMOBILE")
+            ;;
+
+        elara-single)
+            xrandr \
+                --output DP1 --off \
+                --output eDP1 --off \
+                --output HDMI1 --auto --mode 1920x1080 --primary \
+                --output HDMI2 --off \
+                --output VIRTUAL1 --off
+            ;;
+
         phobos-beamer)
             xrandr \
                 --output eDP1 --auto \

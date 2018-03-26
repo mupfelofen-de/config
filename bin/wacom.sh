@@ -1,5 +1,10 @@
 #! /usr/bin/env zsh
 
+setpen()    {}
+seteraser() {}
+settouch()  {}
+setpad()    {}
+
 case $HOST in
     deimos) ;&
     phobos)
@@ -7,16 +12,16 @@ case $HOST in
         seteraser() { xsetwacom set "Wacom BambooPT 2FG Small Pen eraser" $* }
         setpad()    { xsetwacom set "Wacom BambooPT 2FG Small Pad pad" $* }
         xinput disable "$(xinput list --id-only "Wacom BambooPT 2FG Small Finger")"
+        setpen MapToOutput eDP1
         ;;
 
-    *)
-        setpen()    {}
-        seteraser() {}
-        settouch()  {}
-
+    elara)
+        setpen() { xsetwacom set "Wacom Intuos S 2 Pen stylus" $* }
+        setpad() { xsetwacom set "Wacom Intuos S 2 Pad pad" $* }
+        setpen MapToOutput HDMI1
+        ;;
 esac
 
-setpen MapToOutput eDP1
 setpen Mode "Absolute"
 setpen PressureCurve "0 0 100 100"
 setpen Rotate "none"
