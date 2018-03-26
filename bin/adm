@@ -48,6 +48,36 @@ case "$*" in
         done
         ;;
 
+    "scrub cancel")
+        for n in /media/{backup,"$HOSTNAME"-hyper}; do
+            btrfs scrub cancel "$n" || true
+        done
+        ;;
+
+    "scrub resume")
+        for n in /media/{backup,"$HOSTNAME"-hyper}; do
+            btrfs scrub resume -c3 "$n" || true
+        done
+        ;;
+
+    "scrub start")
+        for n in /media/{backup,"$HOSTNAME"-hyper}; do
+            btrfs scrub start -c3 -q "$n" || true
+        done
+        ;;
+
+    "scrub status")
+        for n in /media/{backup,"$HOSTNAME"-hyper}; do
+            btrfs scrub status -dR "$n"
+        done
+        ;;
+
+    "scrub statusi")
+        for n in /media/{backup,"$HOSTNAME"-hyper}; do
+            btrfs scrub status "$n"
+        done
+        ;;
+
     *) echo "Unknown command" >&2
        exit 1
 esac
