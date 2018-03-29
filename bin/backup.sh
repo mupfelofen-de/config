@@ -28,16 +28,18 @@ backup_open() {
 
 
 backup_run() {
-    if ! sha512sum --quiet -c ~/backup/token.sha512; then
-        echo "Token file hash mismatch" >&2
-        exit 1
-    fi
-
     if mountpoint -q /media/backup
     then was_open=y
     else was_open=""; fi
 
     backup_open
+
+    if ! sha512sum --quiet -c ~/backup/token.sha512; then
+        echo "Token file hash mismatch" >&2
+        [[ -n $was_open ]] || backup_close
+        exit 1
+    fi
+
     ionice -c3 ~/.nix-profile/sbin/btrbk \
         -c ~/cfg/my/btrbk."$(hostname)".conf \
         "$@" \
