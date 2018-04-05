@@ -169,6 +169,8 @@ import qualified Data.ByteString as B
 ")
      ("J" . "import qualified Data.Aeson as J
 ")
+     ("L" . "import Control.Lens
+")
      ("M" . "import Data.Map.Strict (Map)
 import qualified Data.Map.Strict as M
 ")
