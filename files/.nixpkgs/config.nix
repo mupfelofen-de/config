@@ -216,8 +216,10 @@ nixos : {
             cabal-install
             clock
             comonad
+            concurrent-machines
             criterion
             cryptonite
+            digest
             exceptions
             fingertree
             free
@@ -227,10 +229,12 @@ nixos : {
             hasktags
             hscolour
             http-conduit
+            JuicyPixels
             kan-extensions
             lens
             lens-aeson
             linear
+            logict
             machines
             megaparsec
             mwc-random
