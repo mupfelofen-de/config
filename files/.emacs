@@ -26,6 +26,7 @@
 (load "ertes-org")
 (load "ertes-paredit")
 (load "ertes-python")
+(load "ertes-time")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -433,6 +434,9 @@ Erstellt: %U" :prepend t))))
  '(standard-indent 4)
  '(tab-always-indent (quote complete))
  '(tab-stop-list (quote (4 8 12 16 20 24 28 32 36 40 44 48 52 56 60)))
+ '(timeclock-file "~/org/timeclock.ledger")
+ '(timeclock-mode-line-display t)
+ '(timeclock-use-display-time nil)
  '(tool-bar-mode nil nil (tool-bar))
  '(tramp-default-method "ssh")
  '(tramp-use-ssh-controlmaster-options nil)
