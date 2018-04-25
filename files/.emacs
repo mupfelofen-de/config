@@ -142,7 +142,7 @@
  '(geiser-guile-manual-lookup-nodes (quote ("Guile" "guile-2.0" "guile")))
  '(global-font-lock-mode t nil (font-lock))
  '(gnus-inhibit-images t)
- '(grep-command "grep --color -HinR ")
+ '(grep-command "grep --color -Hinr ")
  '(haskell-cabal-list-comma-position (quote after))
  '(haskell-doc-prettify-types nil)
  '(haskell-doc-show-reserved nil)
@@ -256,7 +256,7 @@ import qualified Data.IntSet as Si
  '(ibuffer-expert t)
  '(ibuffer-never-show-predicates
    (quote
-    ("^app\\.org$" "^bitlbee$" "^&bitlbee$" "^\\*calc trail\\*$" "^\\*calculator\\*$" "^\\*calendar\\*$" "^\\*compilation\\*$" "^\\*completions\\*$" "^\\*customize " "^diary$" "^freenode$" "^\\*help\\*$" "^\\*hs-error\\*$" "^\\*ledger report\\*$" "^\\*magit[:-]" "^\\*messages\\*$" "^notes.org$" "^\\*notmuch-hello\\*$" "^personal\\.ledger$" "^\\*scratch\\*$" "^\\*shell command output\\*$" "^#")) nil (ibuf-ext))
+    ("^app\\.org$" "^bitlbee$" "^&bitlbee$" "^\\*calc trail\\*$" "^\\*calculator\\*$" "^\\*calendar\\*$" "^\\*compilation\\*$" "^\\*completions\\*$" "^\\*customize " "^diary$" "^freenode$" "^\\*help\\*$" "^\\*hs-error\\*$" "^\\*ledger report\\*$" "^magit[:-]" "^\\*messages\\*$" "^notes.org$" "^\\*notmuch-hello\\*$" "^personal\\.ledger$" "^\\*scratch\\*$" "^\\*shell command output\\*$" "^#")) nil (ibuf-ext))
  '(imaxima-equation-color "gray")
  '(imaxima-fnt-size "huge")
  '(indent-tabs-mode nil)
@@ -285,6 +285,7 @@ import qualified Data.IntSet as Si
  '(list-directory-verbose-switches "-lh")
  '(ls-lisp-dirs-first t)
  '(magit-diff-arguments (quote ("--stat" "--stat-width=200" "--no-ext-diff")))
+ '(magit-status-margin (quote (t age magit-log-margin-width t 12)))
  '(mail-envelope-from (quote header))
  '(mail-specify-envelope-from t)
  '(markdown-asymmetric-header t)
