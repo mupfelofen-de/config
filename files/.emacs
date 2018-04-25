@@ -46,12 +46,7 @@
  '(browse-url-firefox-new-window-is-tab t)
  '(browse-url-firefox-program "palemoon")
  '(c-basic-offset 4)
- '(c-offsets-alist
-   (quote
-    ((case-label . +)
-     (access-label . -2)
-     (label . +)
-     (arglist-intro . +))))
+ '(c-offsets-alist (quote ((case-label . 2))))
  '(calc-highlight-selections-with-faces t)
  '(calendar-mark-diary-entries-flag t)
  '(calendar-week-start-day 1)
@@ -256,6 +251,7 @@ import qualified Data.IntSet as Si
  '(initial-buffer-choice nil)
  '(jit-lock-stealth-time 0.5)
  '(jq-indent-offset 4)
+ '(js-switch-indent-offset 2)
  '(kept-new-versions 7)
  '(kept-old-versions 2)
  '(keyboard-coding-system (quote utf-8))
