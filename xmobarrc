@@ -1,0 +1,22 @@
+Config {
+    alignSep = "}{",
+    allDesktops = True,
+    alpha = 224,
+    bgColor = "#000",
+    commands = [
+        Run Battery ["-t", "<watts>W <leftvbar> <left>% (<timeleft>)", "--",
+                     "-l", "#0f0",
+                     "-m", "#fa0",
+                     "-h", "#f00"] 10,
+        Run Cpu ["-t", "<total>% <vbar>"] 10,
+        Run Date "%a %m-%d %T" "date" 10,
+        Run DiskU [("/", "<free>")] [] 100,
+        Run Memory ["-t", "<available>M"] 10,
+        Run Swap ["-t", "<used>M"] 10
+    ],
+    fgColor = "#fff",
+    font = "xft:DejaVu Serif",
+    overrideRedirect = False,
+    position = Top,
+    template = " }{ %cpu% | %memory% / %swap% | %disku% | %battery% | %date%"
+}
