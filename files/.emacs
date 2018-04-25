@@ -310,10 +310,10 @@ import qualified Data.IntSet as Si
  '(notmuch-saved-searches
    (quote
     ((:name "inbox" :query "tag:inbox" :key "i")
-     (:name "unread" :query "tag:unread" :key "u")
+     (:name "unread" :query "tag:unread not (path:system/** from:rss2email@*)" :key "u")
      (:name "diaspora" :query "from:diaspora@nerdpol.ch tag:unread" :key "cd")
      (:name "recent" :query "date:48h.. not from:diaspora@nerdpol.ch" :key "r")
-     (:name "flagged" :query "tag:flagged" :key "f")
+     (:name "feeds" :query "tag:unread path:system/** from:rss2email@*" :key "f")
      (:name "sent" :query "tag:sent" :key "t")
      (:name "drafts" :query "tag:draft" :key "d")
      (:name "all mail" :query "*" :key "a"))))
