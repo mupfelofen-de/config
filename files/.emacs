@@ -152,6 +152,12 @@
      ("B" . "import Data.ByteString (ByteString)
 import qualified Data.ByteString as B
 ")
+     ("Bb" . "import Data.ByteString.Builder (Builder)
+import qualified Data.ByteString.Builder as Bb
+import Data.Monoid
+")
+     ("Bc" . "import qualified Data.ByteString.UTF8 as Bc
+")
      ("Bl" . "import qualified Data.ByteString.Lazy as Bl
 ")
      ("Codensity" . "import Control.Monad.Codensity
@@ -184,25 +190,32 @@ import qualified Data.Text as T
 import qualified Data.Text.Encoding as T
 import qualified Data.Text.IO as T
 ")
+     ("Tb" . "import Data.Monoid
+import qualified Data.Text.Lazy.Builder as Tb
+")
      ("Tl" . "import qualified Data.Text.Lazy as Tl
 import qualified Data.Text.Lazy.Encoding as Tl
 import qualified Data.Text.Lazy.IO as Tl
 ")
      ("Traversable" . "import Data.Traversable
 ")
-     ("V" . "import Data.Vector.Generic (Vector)
+     ("Vg" . "import Data.Vector.Generic (Vector)
 import qualified Data.Vector.Generic as V
 ")
      ("Vb" . "import qualified Data.Vector as Vb
 ")
      ("Vbm" . "import qualified Data.Vector.Mutable as Vbm
 ")
-     ("Vm" . "import Data.Vector.Generic.Mutable (MVector)
+     ("Vgm" . "import Data.Vector.Generic.Mutable (MVector)
 import qualified Data.Vector.Generic.Mutable as Vm
 ")
      ("Vs" . "import qualified Data.Vector.Storable as Vs
 ")
-     ("Vu" . "import qualified Data.Vector.Unboxed as Vu
+     ("Vu" . "import Data.Vector.Unboxed (Unbox)
+import qualified Data.Vector.Unboxed as Vu
+")
+     ("Vum" . "import Data.Vector.Unboxed (Unbox)
+import qualified Data.Vector.Unboxed.Mutable as Vum
 ")
      ("S" . "import Data.Set (Set)
 import qualified Data.Set as S
