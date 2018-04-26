@@ -22,5 +22,5 @@ Config {
     font = "xft:DejaVu Serif:size=12",
     overrideRedirect = False,
     position = BottomP 0 48,
-    template = "%XMonadLog% }{ %cpu%   %memory%   %disku%   %battery%   %date%"
+    template = " %XMonadLog% }{ %cpu%   %memory%   %disku%   %battery%   %date% "
 }
