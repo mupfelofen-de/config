@@ -8,7 +8,6 @@
 
 module Main where
 
-import qualified XMonad.StackSet as W
 import Control.Monad.State
 import Data.Monoid
 import MyXMonad.Audio
@@ -18,12 +17,14 @@ import System.Taffybar.Hooks.PagerHints
 import XMonad
 import XMonad.Actions.CycleWS
 import XMonad.Actions.DynamicWorkspaces
+import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.InsertPosition
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Spacing
+import qualified XMonad.StackSet as W
 import XMonad.Util.EZConfig
 import XMonad.Util.XSelection
 
@@ -158,6 +159,8 @@ main = xmonad (docks (cfg `additionalKeysP` myKeys))
                    smartSpacing 1 $
                    reg,
 
+            logHook = dynamicLogString logPP >>= xmonadPropLog,
+
             manageHook =
                 (className =? "mpv"   --> doFloat) <>
                 (className =? "URxvt" --> insertPosition Below Newer) <>
@@ -169,5 +172,25 @@ main = xmonad (docks (cfg `additionalKeysP` myKeys))
             focusedBorderColor = "#f00",
             normalBorderColor  = "#000"
           }
+
+    logPP =
+        def {
+          ppCurrent = xmobarColor "#fff" "#008" . pad,
+          ppExtras  = [winCount],
+          ppHidden  = hidden,
+          ppOrder   = order,
+          ppSep     = "  ",
+          ppTitle   = xmobarColor "#8f0" "#000",
+          ppUrgent  = xmobarColor "#fff" "#a00" . pad,
+          ppVisible = xmobarColor "#fff" "#000"
+        }
+        where
+        hidden (c0 : cs@(_:_)) = xmobarColor "#aaa" "#000" [c0, last cs]
+        hidden cs = xmobarColor "#aaa" "#000" cs
+
+        order (ws : _ : n : c : _) = [ws, c, n]
+        order ss = ss
+
+        winCount = gets (Just . xmobarColor "#ff0" "#000" . show . length . W.index . windowset)
 
     myDef = ewmh (pagerHints def)

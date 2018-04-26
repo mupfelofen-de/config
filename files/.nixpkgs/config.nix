@@ -20,7 +20,6 @@ nixos : {
                 });
 
         in {
-            mytaffybar = self.callPackage ../cfg/my/mytaffybar {};
             myxmonad = self.callPackage ../cfg/my/myxmonad {};
             powermate = asGit <ertes-src/powermate> {
                 rev = "ed4381827bcb197cb1fd4a63c2e04bcdb7548899";
@@ -169,8 +168,8 @@ nixos : {
                 glxinfo
                 gmrun
                 gucharmap
-                haskellPackages.mytaffybar
                 haskellPackages.myxmonad
+                haskellPackages.xmobar
                 inkscape
                 kid3
                 ledger
@@ -187,6 +186,7 @@ nixos : {
                 torbrowser
                 transmission
                 transmission-remote-cli
+                trayer
                 unclutter
                 xclip
                 xlibs.xbacklight

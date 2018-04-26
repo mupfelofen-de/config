@@ -1,0 +1,12 @@
+#! /bin/sh
+
+exec trayer \
+    --align right \
+    --alpha 255 \
+    --edge bottom \
+    --height 20 \
+    --heighttype pixel \
+    --iconspacing 2 \
+    --monitor primary \
+    --transparent true \
+    --widthtype request

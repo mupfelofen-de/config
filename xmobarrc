@@ -1,22 +1,26 @@
+-- -*-haskell-*-
 Config {
     alignSep = "}{",
     allDesktops = True,
-    alpha = 224,
     bgColor = "#000",
     commands = [
-        Run Battery ["-t", "<watts>W <leftvbar> <left>% (<timeleft>)", "--",
+        Run Battery ["-H", "90", "-L", "15", "-h", "#0f0", "-n", "#fff", "-l", "#f44",
+                     "-t", "<leftvbar> <left> <watts>W (<timeleft>)",
+                     "--",
                      "-l", "#0f0",
                      "-m", "#fa0",
                      "-h", "#f00"] 10,
-        Run Cpu ["-t", "<total>% <vbar>"] 10,
+        Run Cpu ["-H", "20", "-L", "10", "-h", "#f44", "-n", "#fa0", "-l", "#0f0",
+                 "-t", "<total>"] 10,
         Run Date "%a %m-%d %T" "date" 10,
-        Run DiskU [("/", "<free>")] [] 100,
-        Run Memory ["-t", "<available>M"] 10,
-        Run Swap ["-t", "<used>M"] 10
+        Run DiskU [("/", "<free>")] ["-H", "50", "-L", "10", "-h", "#0f0", "-n", "#fff", "-l", "#f44"] 100,
+        Run Memory ["-H", "4096", "-L", "1024", "-h", "#0f0", "-n", "#fff", "-l", "#f44",
+                    "-t", "<available>"] 10,
+        Run XMonadLog
     ],
     fgColor = "#fff",
-    font = "xft:DejaVu Serif",
+    font = "xft:DejaVu Serif:size=12",
     overrideRedirect = False,
-    position = Top,
-    template = " }{ %cpu% | %memory% / %swap% | %disku% | %battery% | %date%"
+    position = BottomP 0 48,
+    template = "%XMonadLog% }{ %cpu%   %memory%   %disku%   %battery%   %date%"
 }
