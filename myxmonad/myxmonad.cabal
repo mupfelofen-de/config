@@ -17,7 +17,6 @@ executable myxmonad
         lens,
         mtl,
         random,
-        taffybar,
         transformers,
         xmonad,
         xmonad-contrib

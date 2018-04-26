@@ -13,7 +13,6 @@ import Data.Monoid
 import MyXMonad.Audio
 import MyXMonad.Window
 import MyXMonad.Workspace
-import System.Taffybar.Hooks.PagerHints
 import XMonad
 import XMonad.Actions.CycleWS
 import XMonad.Actions.DynamicWorkspaces
@@ -193,4 +192,4 @@ main = xmonad (docks (cfg `additionalKeysP` myKeys))
 
         winCount = gets (Just . xmobarColor "#ff0" "#000" . show . length . W.index . windowset)
 
-    myDef = ewmh (pagerHints def)
+    myDef = ewmh def
