@@ -113,7 +113,7 @@ main = xmonad (docks (cfg `additionalKeysP` myKeys))
           ("S-<Print>", spawn "scrot -u ~/tmp/scrshot/%Y-%m-%d-%H:%M:%S.png"),
 
           -- Misc
-          ("C-M-q", restart "myxmonad" False),
+          ("C-M-q", restart "myxmonad-test" True),
           ("M-q",   restart "myxmonad" True),
 
           -- Multimedia

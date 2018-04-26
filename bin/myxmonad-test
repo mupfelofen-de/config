@@ -1,0 +1,5 @@
+#! /usr/bin/env zsh
+
+cd ~
+cmd=("runghc" "-i$HOME/cfg/my/myxmonad" ~/cfg/my/myxmonad/Main.hs "${(q)@}")
+exec nix-shell ~/cfg/my/myxmonad/shell.nix --command "$cmd"
