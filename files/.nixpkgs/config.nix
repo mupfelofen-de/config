@@ -27,15 +27,15 @@ nixos : {
             };
             progress-meter = asGit <ertes-src/progress-meter> {
                 rev = "refs/heads/master";
-                sha256 = "10mbbaav7ffn956rpcyfd2fym4mdk5sq6vq5gpakxr1r07k4ajbq";
+                sha256 = "01c2kklz5z544q17cqghxvc0cx0wa27h6i6km1a5aaypw6l0w03d";
             };
             rapid = asGit <ertes-src/rapid> {
                 rev = "refs/heads/master";
-                sha256 = "1jkr26cpxhdjszwpcilzxaqfqy3ffmbbjaq3181s40m9grjx2s24";
+                sha256 = "08gagxsczcan41ks00iifrpl05y083wnrz73mp8ssnv72f0jjnnp";
             };
             rapid-term = asGit <ertes-src/rapid-term> {
                 rev = "refs/heads/master";
-                sha256 = "1z0da3i3myw8zjnh5cn7ka6l1hq8rikhwdjrks484ibqp895d51l";
+                sha256 = "1cx2fnkk6vc93gczdwalx9n1z0p4haghnxj8clp1zkl5nnajarj7";
             };
             reflex = asGit <ertes-src/reflex> {
                 rev = "refs/heads/develop";
@@ -161,7 +161,7 @@ nixos : {
                 disk_indicator
                 feh
                 ffmpeg
-                firefox-esr
+                # firefox-esr
                 gajim
                 geeqie
                 gimp
@@ -224,7 +224,6 @@ nixos : {
             fingertree
             free
             generic-deriving
-            ghc-datasize
             gl
             hasktags
             hscolour
