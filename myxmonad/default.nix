@@ -1,5 +1,5 @@
-{ mkDerivation, alsa-mixer, base, lens, mtl, random, stdenv
-, transformers, xmonad, xmonad-contrib
+{ mkDerivation, base, lens, mtl, random, stdenv, transformers
+, xmonad, xmonad-contrib
 }:
 mkDerivation {
   pname = "myxmonad";
@@ -8,8 +8,9 @@ mkDerivation {
   isLibrary = false;
   isExecutable = true;
   executableHaskellDepends = [
-    alsa-mixer base lens mtl random transformers xmonad xmonad-contrib
+    base lens mtl random transformers xmonad xmonad-contrib
   ];
   description = "XMonad configuration";
   license = stdenv.lib.licenses.unfree;
+  hydraPlatforms = stdenv.lib.platforms.none;
 }

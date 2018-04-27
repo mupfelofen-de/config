@@ -10,7 +10,6 @@ module Main where
 
 import Control.Monad.State
 import Data.Monoid
-import MyXMonad.Audio
 import MyXMonad.Window
 import MyXMonad.Workspace
 import XMonad
@@ -117,10 +116,10 @@ main = xmonad (docks (cfg `additionalKeysP` myKeys))
           ("M-q",   restart "myxmonad" True),
 
           -- Multimedia
-          ("<XF86AudioLowerVolume>",  liftIO $ withVolume "default" "Master" (subtract (1/32))),
-          ("<XF86AudioMute>",         liftIO $ toggleMute "default" "Master" not),
+          ("<XF86AudioLowerVolume>",  spawn "pactl set-sink-volume 0 -1%"),
+          ("<XF86AudioMute>",         spawn "pactl set-sink-mute 0 toggle"),
           ("<XF86AudioPlay>",         spawn "mpc -q toggle"),
-          ("<XF86AudioRaiseVolume>",  liftIO $ withVolume "default" "Master" (+ 1/32)),
+          ("<XF86AudioRaiseVolume>",  spawn "pactl set-sink-volume 0 +1%"),
           ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10"),
           ("<XF86MonBrightnessUp>",   spawn "xbacklight -inc 10"),
           ("M-m",                     spawn "urxvtc -e ncmpc"),
