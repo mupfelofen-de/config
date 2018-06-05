@@ -1,13 +1,14 @@
 #! /usr/bin/env zsh
 
 export ALTERNATE_EDITOR=""
-export BROWSER="palemoon"
+#export BROWSER="palemoon"
+export BROWSER="firefox"
 export CHICKEN_DOC_REPOSITORY=~/.chicken/chicken-doc
 export CHICKEN_INSTALL_PREFIX=~/.chicken
 export CHICKEN_REPOSITORY=~/.chicken/eggs
-export COPYRIGHT="2018 Ertugrul Söylemez"
+export COPYRIGHT="2018 Michael Fitzmayer"
 export EDITOR="emacsclient -c -q"
-export EMAIL="Ertugrul Söylemez <esz@posteo.de>"
+export EMAIL="Michael Fitzmayer <mail@michael-fitzmayer.de>"
 export LANG=en_GB.UTF-8
 export LC_COLLATE=POSIX
 export LC_CTYPE=de_DE.UTF-8
@@ -27,10 +28,10 @@ NIX_PATH+=":channels=$HOME/channels"
 path=(${path:#/run/current-system/sw/bin})
 path+=(/run/current-system/sw/bin)
 
-path=(${path:#/home/never/cfg/my/bin})
+path=(${path:#/home/micha/cfg/my/bin})
 path+=(~/cfg/my/bin)
 
-path=(${path:#/home/never/bin})
+path=(${path:#/home/micha/bin})
 path+=(~/bin)
 
 manpath=(

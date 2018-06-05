@@ -1,0 +1,9 @@
+[user]
+	name = Michael Fitzmayer
+	email = mail@michael-fitzmayer.de
+[core]
+	editor = emacs
+[credential]
+	helper = cache --timeout=10800
+[push]
+	default = matching

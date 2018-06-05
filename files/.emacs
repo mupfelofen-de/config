@@ -6,14 +6,14 @@
 (setq package-user-dir "~/.nix-profile/share/emacs/site-lisp/elpa")
 (package-initialize)
 
-(load "ProofGeneral/generic/proof-site")
+;(load "ProofGeneral/generic/proof-site")
 
 (require 'agda2 nil t)
 (require 'calc)
 (require 'dired-x)
 (require 'ibuf-ext)
 (require 'imaxima nil t)
-(require 'nix-mode)
+;(require 'nix-mode)
 (require 'nxml-mode)
 (require 'yasnippet)
 
@@ -454,7 +454,8 @@ Erstellt: %U" :prepend t))))
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#310" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "#00506e" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ ;;'(default ((t (:inherit nil :stipple nil :background "#310" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(agda2-highlight-datatype-face ((t (:foreground "cyan"))))
  '(agda2-highlight-function-face ((t (:foreground "cyan"))))
  '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
