@@ -155,11 +155,13 @@ nixos : {
             paths = with self; [
                 audacity
                 beets
-                blender
-                chocolateDoom
+                # blender
+                # chocolateDoom
                 compton-git
                 disk_indicator
+                enlightenment.enlightenment
                 feh
+                firefox
                 ffmpeg
                 # firefox-esr
                 gajim
@@ -170,6 +172,7 @@ nixos : {
                 gucharmap
                 haskellPackages.myxmonad
                 haskellPackages.xmobar
+                i3lock
                 inkscape
                 kid3
                 ledger
@@ -177,7 +180,7 @@ nixos : {
                 mpd
                 mpv
                 ncmpc
-                palemoon
+                # palemoon
                 pavucontrol
                 redshift
                 rxvt_unicode
