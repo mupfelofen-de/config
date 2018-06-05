@@ -159,7 +159,7 @@ nixos : {
                 # chocolateDoom
                 compton-git
                 disk_indicator
-                enlightenment.enlightenment
+                # enlightenment.enlightenment
                 feh
                 firefox
                 ffmpeg
@@ -185,10 +185,11 @@ nixos : {
                 redshift
                 rxvt_unicode
                 scrot
+                stalonetray
                 syncthing
                 torbrowser
-                transmission
-                transmission-remote-cli
+                # transmission
+                # transmission-remote-cli
                 trayer
                 unclutter
                 xclip
