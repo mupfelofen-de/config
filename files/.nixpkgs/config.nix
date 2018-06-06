@@ -1,6 +1,8 @@
 nixos : {
     allowUnfree = true;
     firefox.enableAdobeFlash = false;
+    hardware.cpu.intel.updateMicrocode = true;
+    services.xserver.desktopManager.enlightenment.enable = true;
 
     haskellPackageOverrides = self: super:
         let asDarcs = path:
@@ -20,7 +22,7 @@ nixos : {
                 });
 
         in {
-            myxmonad = self.callPackage ../cfg/my/myxmonad {};
+            # myxmonad = self.callPackage ../cfg/my/myxmonad {};
             powermate = asGit <ertes-src/powermate> {
                 rev = "ed4381827bcb197cb1fd4a63c2e04bcdb7548899";
                 sha256 = "1bj073phaij38b057adsgqbvqr2lvv99vicxixmysvj8r4gnz57l";
@@ -158,8 +160,8 @@ nixos : {
                 # blender
                 # chocolateDoom
                 compton-git
+                devtodo
                 disk_indicator
-                # enlightenment.enlightenment
                 feh
                 firefox
                 ffmpeg
@@ -170,8 +172,8 @@ nixos : {
                 glxinfo
                 gmrun
                 gucharmap
-                haskellPackages.myxmonad
-                haskellPackages.xmobar
+                # haskellPackages.myxmonad
+                # haskellPackages.xmobar
                 i3lock
                 inkscape
                 kid3
