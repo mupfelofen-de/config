@@ -34,8 +34,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-'(package-archives (quote (("gnu" . "http://elpa.gnu.org/packages/") ("melpa-stable" . "http://stable.melpa.org/packages/"))))
-'(LaTeX-verbatim-environments (quote ("verbatim" "verbatim*" "boxedverbatim")))
+ '(LaTeX-verbatim-environments (quote ("verbatim" "verbatim*" "boxedverbatim")))
  '(TeX-PDF-mode t)
  '(TeX-auto-save nil)
  '(TeX-parse-self t)
@@ -415,7 +414,11 @@ Erstellt: %U" :prepend t))))
  '(org-tags-exclude-from-inheritance (quote ("crypt")))
  '(org-tags-sort-function (quote string<))
  '(org-treat-insert-todo-heading-as-state-change t)
- '(package-selected-packages (quote (##)))
+ '(package-archives
+   (quote
+    (("gnu" . "http://elpa.gnu.org/packages/")
+     ("melpa-stable" . "http://stable.melpa.org/packages/"))))
+ '(package-selected-packages (quote (haskell-mode ##)))
  '(pc-select-override-scroll-error t)
  '(pc-select-selection-keys-only t)
  '(pc-selection-mode t)
@@ -457,7 +460,7 @@ Erstellt: %U" :prepend t))))
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#00506e" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "#450066" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(agda2-highlight-datatype-face ((t (:foreground "cyan"))))
  '(agda2-highlight-function-face ((t (:foreground "cyan"))))
  '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
