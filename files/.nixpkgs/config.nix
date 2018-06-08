@@ -159,9 +159,12 @@ nixos : {
                 beets
                 # blender
                 # chocolateDoom
+                cataclysm-dda
+                claws-mail
                 compton-git
                 devtodo
                 disk_indicator
+                dwarf-fortress
                 feh
                 firefox
                 ffmpeg
@@ -188,6 +191,7 @@ nixos : {
                 rxvt_unicode
                 scrot
                 stalonetray
+                sonata
                 syncthing
                 torbrowser
                 # transmission
