@@ -1,8 +1,6 @@
 nixos : {
     allowUnfree = true;
     firefox.enableAdobeFlash = false;
-    hardware.cpu.intel.updateMicrocode = true;
-    services.xserver.desktopManager.enlightenment.enable = true;
 
     haskellPackageOverrides = self: super:
         let asDarcs = path:
@@ -23,30 +21,30 @@ nixos : {
 
         in {
             # myxmonad = self.callPackage ../cfg/my/myxmonad {};
-            powermate = asGit <ertes-src/powermate> {
-                rev = "ed4381827bcb197cb1fd4a63c2e04bcdb7548899";
-                sha256 = "1bj073phaij38b057adsgqbvqr2lvv99vicxixmysvj8r4gnz57l";
-            };
-            progress-meter = asGit <ertes-src/progress-meter> {
-                rev = "refs/heads/master";
-                sha256 = "01c2kklz5z544q17cqghxvc0cx0wa27h6i6km1a5aaypw6l0w03d";
-            };
-            rapid = asGit <ertes-src/rapid> {
-                rev = "refs/heads/master";
-                sha256 = "08gagxsczcan41ks00iifrpl05y083wnrz73mp8ssnv72f0jjnnp";
-            };
-            rapid-term = asGit <ertes-src/rapid-term> {
-                rev = "refs/heads/master";
-                sha256 = "1cx2fnkk6vc93gczdwalx9n1z0p4haghnxj8clp1zkl5nnajarj7";
-            };
-            reflex = asGit <ertes-src/reflex> {
-                rev = "refs/heads/develop";
-                sha256 = "1835njkbrv7mbqa000zldhfvi9zhz5ic83s92nb9s83w19cxxps3";
-            };
-            wires = asGit <ertes-src/wires> {
-                rev = "53ad7aae155d420f3de7bd7222fe13f05fe13110";
-                sha256 = "1nhq61rqfv8m0yiw7h8hmwmbvll7cx6f9yyp8ymf8rrhdk5fhd4i";
-            };
+            #powermate = asGit <ertes-src/powermate> {
+            #    rev = "ed4381827bcb197cb1fd4a63c2e04bcdb7548899";
+            #    sha256 = "1bj073phaij38b057adsgqbvqr2lvv99vicxixmysvj8r4gnz57l";
+            #};
+            #progress-meter = asGit <ertes-src/progress-meter> {
+            #    rev = "refs/heads/master";
+            #    sha256 = "01c2kklz5z544q17cqghxvc0cx0wa27h6i6km1a5aaypw6l0w03d";
+            #};
+            #rapid = asGit <ertes-src/rapid> {
+            #    rev = "refs/heads/master";
+            #    sha256 = "08gagxsczcan41ks00iifrpl05y083wnrz73mp8ssnv72f0jjnnp";
+            #};
+            #rapid-term = asGit <ertes-src/rapid-term> {
+            #    rev = "refs/heads/master";
+            #    sha256 = "1cx2fnkk6vc93gczdwalx9n1z0p4haghnxj8clp1zkl5nnajarj7";
+            #};
+            #reflex = asGit <ertes-src/reflex> {
+            #    rev = "refs/heads/develop";
+            #    sha256 = "1835njkbrv7mbqa000zldhfvi9zhz5ic83s92nb9s83w19cxxps3";
+            #};
+            #wires = asGit <ertes-src/wires> {
+            #    rev = "53ad7aae155d420f3de7bd7222fe13f05fe13110";
+            #    sha256 = "1nhq61rqfv8m0yiw7h8hmwmbvll7cx6f9yyp8ymf8rrhdk5fhd4i";
+            #};
         };
 
     packageOverrides = super: let self = super.pkgs; in {
@@ -61,6 +59,7 @@ nixos : {
                 connect
                 curl
                 darcs
+                devtodo
                 dict
                 emacs
                 emacsPackages.darcsum
@@ -162,7 +161,6 @@ nixos : {
                 cataclysm-dda
                 claws-mail
                 compton-git
-                devtodo
                 disk_indicator
                 dwarf-fortress
                 feh
