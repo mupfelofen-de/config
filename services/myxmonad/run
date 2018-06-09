@@ -1,4 +1,4 @@
 #! /usr/bin/env sh
 
-cd
-exec myxmonad
+# cd
+# exec myxmonad

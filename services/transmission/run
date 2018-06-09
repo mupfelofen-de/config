@@ -1,4 +1,4 @@
 #! /usr/bin/env sh
 
-cd
-exec transmission-daemon -f
+# cd
+# exec transmission-daemon -f

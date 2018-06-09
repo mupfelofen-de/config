@@ -6,14 +6,14 @@
 (setq package-user-dir "~/.nix-profile/share/emacs/site-lisp/elpa")
 (package-initialize)
 
-;(load "ProofGeneral/generic/proof-site")
+(load "ProofGeneral/generic/proof-site")
 
 (require 'agda2 nil t)
 (require 'calc)
 (require 'dired-x)
 (require 'ibuf-ext)
 (require 'imaxima nil t)
-;(require 'nix-mode)
+(require 'nix-mode)
 (require 'nxml-mode)
 (require 'package)
 (require 'yasnippet)

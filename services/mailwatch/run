@@ -1,4 +1,4 @@
 #! /bin/sh
 
-cd
-exec mailwatch ~/Maildir
+# cd
+# exec mailwatch ~/Maildir

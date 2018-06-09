@@ -1,4 +1,4 @@
 #! /usr/bin/env sh
 
-cd
-exec compton
+# cd
+# exec compton

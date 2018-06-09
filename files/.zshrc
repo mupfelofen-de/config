@@ -204,7 +204,7 @@ if [[ -z ${nev_subshell-} ]]; then
     #tail -n10 /var/log/messages
     #echo
 
-    ibam --percentcharge
+    # ibam --percentcharge
     echo
     echo -e $(date)
     echo
