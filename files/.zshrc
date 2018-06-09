@@ -197,6 +197,7 @@ compinit
 
 
 if [[ -z ${nev_subshell-} ]]; then
+    echo Battery `upower -d | grep percentage -m 1`
     echo
     echo -e $(date)
     echo
