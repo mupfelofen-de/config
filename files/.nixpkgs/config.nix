@@ -139,6 +139,7 @@ nixos : {
         ertes-dev = super.buildEnv {
             name = "ertes-dev";
             paths = with self; [
+                autoconf
                 avrbinutils
                 avrdude
                 avrgcc
