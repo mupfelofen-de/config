@@ -22,8 +22,6 @@ alias rsync='rsync -aSP'
 alias s='su -l'
 alias sc='su -lc "screen -S nevroot -xR"'
 alias svc='s6-svc'
-alias sysupdate='yaourt -Syu --aur'
-alias sysupdate.throttled='yaourt -Syu --aur --config /etc/pacman.conf.throttled'
 alias tag='tmsu tag'
 alias tags='tmsu tags'
 alias timidity='timidity -c ~/inst/eawpats/linuxconfig/timidity.cfg -B8,8 -p32 -EFdelay=d,0 -EFchorus=d,0 -EFreverb=d,0 -Os'
@@ -199,12 +197,6 @@ compinit
 
 
 if [[ -z ${nev_subshell-} ]]; then
-    #fortune
-    #echo
-    #tail -n10 /var/log/messages
-    #echo
-
-    # ibam --percentcharge
     echo
     echo -e $(date)
     echo

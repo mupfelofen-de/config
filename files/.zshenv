@@ -19,7 +19,7 @@ export NIX_PAGER="cat"
 export PAGER="less"
 export PGDATA=~/db/postgres
 
-NIX_PATH="nixpkgs=/nix/var/nix/profiles/per-user/$USER/channels/nixos/nixpkgs"
+#NIX_PATH="nixpkgs=/nix/var/nix/profiles/per-user/$USER/channels/nixos/nixpkgs"
 NIX_PATH+=":nixos-config=/etc/nixos/configuration.nix"
 NIX_PATH+=":/nix/var/nix/profiles/per-user/$USER/channels"
 NIX_PATH+=":ertes-src=$HOME/src"

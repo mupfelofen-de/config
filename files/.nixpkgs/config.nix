@@ -81,7 +81,7 @@ nixos : {
                 emacsPackagesNg.dash-functional
                 emacsPackagesNg.f
 
-                execline
+                # execline
                 fdupes
                 file
                 fortune
@@ -92,6 +92,7 @@ nixos : {
                 gnupg
                 gptfdisk
                 graphicsmagick
+                imagemagick
                 iotop
                 isync
                 iw
@@ -101,6 +102,7 @@ nixos : {
                 llvm
                 lm_sensors
                 manpages
+                minicom
                 mkpasswd
                 nix-repl
                 nmap
@@ -137,17 +139,30 @@ nixos : {
         ertes-dev = super.buildEnv {
             name = "ertes-dev";
             paths = with self; [
+                avrbinutils
+                avrdude
+                avrgcc
+                avrlibc
                 cabal2nix
                 coq
                 ghc-env
                 ghostscript
                 gnuplot
+                libxml2
                 maxima
                 nix-prefetch-git
                 pandoc
+                pkgconfig
                 pypi2nix
                 python3-env
+                SDL2
+                SDL2_gfx
+                SDL2_image
+                SDL2_mixer
+                SDL2_net
+                SDL2_ttf
                 texlive.combined.scheme-basic
+                zlib
             ];
         };
 
@@ -156,8 +171,7 @@ nixos : {
             paths = with self; [
                 audacity
                 beets
-                # blender
-                # chocolateDoom
+                chocolateDoom
                 cataclysm-dda
                 claws-mail
                 compton-git
@@ -166,7 +180,6 @@ nixos : {
                 feh
                 firefox
                 ffmpeg
-                # firefox-esr
                 gajim
                 geeqie
                 gimp
@@ -177,13 +190,13 @@ nixos : {
                 # haskellPackages.xmobar
                 i3lock
                 inkscape
+                keepassx
                 kid3
                 ledger
                 mpc_cli
                 mpd
                 mpv
                 ncmpc
-                # palemoon
                 pavucontrol
                 redshift
                 rxvt_unicode
@@ -192,8 +205,6 @@ nixos : {
                 sonata
                 syncthing
                 torbrowser
-                # transmission
-                # transmission-remote-cli
                 trayer
                 unclutter
                 xclip

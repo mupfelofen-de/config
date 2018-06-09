@@ -1,24 +1,24 @@
 -- -*-haskell-*-
---import qualified Data.ByteString as B
---import qualified Data.ByteString.Lazy as Bl
---import qualified Data.Text as T
---import qualified Data.Text.IO as T
---import qualified Data.Text.Lazy as Tl
---import qualified Data.Text.Lazy.IO as Tl
---import Control.Applicative
---import Control.Monad
---import Control.Monad.Fix
---import Data.Bits
---import Data.Char
---import Data.Foldable
---import Data.Int
---import Data.Monoid
---import Data.Word
---import System.IO
---import System.Random
+import qualified Data.ByteString as B
+import qualified Data.ByteString.Lazy as Bl
+import qualified Data.Text as T
+import qualified Data.Text.IO as T
+import qualified Data.Text.Lazy as Tl
+import qualified Data.Text.Lazy.IO as Tl
+import Control.Applicative
+import Control.Monad
+import Control.Monad.Fix
+import Data.Bits
+import Data.Char
+import Data.Foldable
+import Data.Int
+import Data.Monoid
+import Data.Word
+import System.IO
+import System.Random
 
 :set prompt  "\x03BB: "
 :seti -XBangPatterns
 :seti -XKindSignatures
 
--- :! stty -echo icanon 2> /dev/null
+:! stty -echo icanon 2> /dev/null
