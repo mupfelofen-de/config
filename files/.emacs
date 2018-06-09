@@ -98,39 +98,39 @@
  '(doc-view-continuous t)
  '(electric-indent-mode nil)
  '(enable-local-variables t)
- '(erc-disable-ctcp-replies t)
- '(erc-email-userid "ertes")
- '(erc-fill-column 90)
- '(erc-fill-prefix "    ")
- '(erc-generate-log-file-name-function (quote erc-generate-log-file-name-short))
- '(erc-join-buffer (quote bury))
- '(erc-keywords (quote ("ertugrul" "s\\(oe\\|ö\\)ylemez")))
- '(erc-kill-server-buffer-on-quit t)
- '(erc-log-channels-directory "~/log/erc")
- '(erc-log-insert-log-on-open t)
- '(erc-log-write-after-insert t)
- '(erc-log-write-after-send t)
- '(erc-lurker-hide-list (quote ("JOIN" "NICK" "PART" "QUIT")))
- '(erc-max-buffer-size 65536)
- '(erc-modules
-   (quote
-    (autojoin button completion fill irccontrols match move-to-prompt netsplit networks noncommands readonly ring track truncate)))
- '(erc-nick
-   (quote
-    ("ertes" "ertesx" "ertes-t6v" "ertes-9L2" "ertes-8pU")))
- '(erc-nickserv-identify-mode (quote nick-change))
- '(erc-prompt-for-nickserv-password nil)
- '(erc-rename-buffers t)
- '(erc-server-flood-penalty 2)
- '(erc-track-faces-priority-list
-   (quote
-    (erc-error-face
-     (erc-nick-default-face erc-current-nick-face)
-     erc-current-nick-face erc-keyword-face
-     (erc-nick-default-face erc-pal-face)
-     erc-pal-face)))
- '(erc-track-priority-faces-only (quote all))
- '(erc-whowas-on-nosuchnick t)
+ ;'(erc-disable-ctcp-replies t)
+ ;'(erc-email-userid "ertes")
+ ;'(erc-fill-column 90)
+ ;'(erc-fill-prefix "    ")
+ ;'(erc-generate-log-file-name-function (quote erc-generate-log-file-name-short))
+ ;'(erc-join-buffer (quote bury))
+ ;'(erc-keywords (quote ("ertugrul" "s\\(oe\\|ö\\)ylemez")))
+ ;'(erc-kill-server-buffer-on-quit t)
+ ;'(erc-log-channels-directory "~/log/erc")
+ ;'(erc-log-insert-log-on-open t)
+ ;'(erc-log-write-after-insert t)
+ ;'(erc-log-write-after-send t)
+ ;'(erc-lurker-hide-list (quote ("JOIN" "NICK" "PART" "QUIT")))
+ ;'(erc-max-buffer-size 65536)
+ ;'(erc-modules
+ ;  (quote
+ ;   (autojoin button completion fill irccontrols match move-to-prompt netsplit networks noncommands readonly ring track truncate)))
+ ;'(erc-nick
+ ;  (quote
+ ;   ("ertes" "ertesx" "ertes-t6v" "ertes-9L2" "ertes-8pU")))
+ ;'(erc-nickserv-identify-mode (quote nick-change))
+ ;'(erc-prompt-for-nickserv-password nil)
+ ;'(erc-rename-buffers t)
+ ;'(erc-server-flood-penalty 2)
+ ;'(erc-track-faces-priority-list
+ ;  (quote
+ ;   (erc-error-face
+ ;    (erc-nick-default-face erc-current-nick-face)
+ ;    erc-current-nick-face erc-keyword-face
+ ;    (erc-nick-default-face erc-pal-face)
+ ;    erc-pal-face)))
+ ;'(erc-track-priority-faces-only (quote all))
+ ;'(erc-whowas-on-nosuchnick t)
  '(file-coding-system-alist (quote ((".*" utf-8 . utf-8))))
  '(fill-column 72)
  '(fill-prefix nil)
@@ -469,8 +469,8 @@ Erstellt: %U" :prepend t))))
  '(agda2-highlight-record-face ((t (:foreground "cyan"))))
  '(agda2-highlight-unsolved-constraint-face ((t (:background "#530"))))
  '(agda2-highlight-unsolved-meta-face ((t (:background "#530"))))
- '(erc-input-face ((t (:foreground "cyan"))))
- '(erc-my-nick-face ((t (:foreground "cyan"))))
+ ;'(erc-input-face ((t (:foreground "cyan"))))
+ ;'(erc-my-nick-face ((t (:foreground "cyan"))))
  '(notmuch-message-summary-face ((t (:background "#808"))))
  '(trailing-whitespace ((t (:background "dark red")))))
 
@@ -523,5 +523,5 @@ Erstellt: %U" :prepend t))))
 (setq vc-handled-backends nil)
 (yas-global-mode 1)
 
-(with-demoted-errors "Unable to load ERC: %S"
-  (load "~/.emacs.d/my-erc"))
+;(with-demoted-errors "Unable to load ERC: %S"
+;  (load "~/.emacs.d/my-erc"))
