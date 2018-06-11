@@ -109,6 +109,7 @@ nixos : {
                 notmuch
                 p7zip
                 pari
+                patchelf
                 pciutils
                 posix_man_pages
                 postgresql100
@@ -126,6 +127,8 @@ nixos : {
                 sshfsFuse
                 tcpdump
                 termdown
+                unison
+                unar
                 unzip
                 usbutils
                 vmtouch
@@ -139,13 +142,13 @@ nixos : {
         ertes-dev = super.buildEnv {
             name = "ertes-dev";
             paths = with self; [
-                autoconf
                 avrbinutils
                 avrdude
                 avrgcc
                 avrlibc
                 cabal2nix
                 coq
+                emscripten
                 ghc-env
                 ghostscript
                 gnuplot
@@ -171,13 +174,14 @@ nixos : {
             name = "ertes-gui";
             paths = with self; [
                 audacity
+                aseprite
                 beets
                 chocolateDoom
-                cataclysm-dda
                 claws-mail
                 compton-git
                 disk_indicator
                 dwarf-fortress
+                endless-sky
                 feh
                 firefox
                 ffmpeg
@@ -198,10 +202,12 @@ nixos : {
                 mpd
                 mpv
                 ncmpc
+                openmw
                 pavucontrol
                 redshift
                 rxvt_unicode
                 scrot
+                scummvm
                 stalonetray
                 sonata
                 syncthing
