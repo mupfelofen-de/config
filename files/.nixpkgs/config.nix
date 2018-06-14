@@ -175,6 +175,7 @@ nixos : {
             paths = with self; [
                 audacity
                 aseprite
+                bb
                 beets
                 chocolateDoom
                 claws-mail
@@ -202,6 +203,7 @@ nixos : {
                 mpd
                 mpv
                 ncmpc
+                notify-desktop
                 openmw
                 pavucontrol
                 redshift
