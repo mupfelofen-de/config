@@ -149,6 +149,8 @@ nixos : {
                 cabal2nix
                 coq
                 emscripten
+                emscriptenPackages.libxml2
+                emscriptenPackages.zlib
                 ghc-env
                 ghostscript
                 gnuplot
@@ -173,10 +175,11 @@ nixos : {
         ertes-gui = super.buildEnv {
             name = "ertes-gui";
             paths = with self; [
+                arx-libertatis
                 audacity
-                aseprite
                 bb
                 beets
+                chirp
                 chocolateDoom
                 claws-mail
                 compton-git
@@ -198,6 +201,7 @@ nixos : {
                 inkscape
                 keepassx
                 kid3
+                krita
                 ledger
                 mpc_cli
                 mpd
@@ -206,16 +210,22 @@ nixos : {
                 notify-desktop
                 openmw
                 pavucontrol
+                ppsspp
                 redshift
                 rxvt_unicode
+                sc-controller
                 scrot
                 scummvm
                 stalonetray
+                steam-run
                 sonata
                 syncthing
+                tiled
                 torbrowser
                 trayer
                 unclutter
+                wine
+                wireshark
                 xclip
                 xlibs.xbacklight
                 xlibs.xev

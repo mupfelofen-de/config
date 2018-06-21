@@ -21,4 +21,4 @@ import System.Random
 :seti -XBangPatterns
 :seti -XKindSignatures
 
-:! stty -echo icanon 2> /dev/null
+-- :! stty -echo icanon 2> /dev/null
