@@ -92,11 +92,13 @@ nixos : {
                 gnupg
                 gptfdisk
                 graphicsmagick
+                htmlTidy
                 imagemagick
                 iotop
                 isync
                 iw
                 jq
+                lame
                 lftp
                 libressl
                 llvm
@@ -104,6 +106,7 @@ nixos : {
                 manpages
                 minicom
                 mkpasswd
+                mpg123
                 nix-repl
                 nmap
                 notmuch
@@ -127,11 +130,13 @@ nixos : {
                 sshfsFuse
                 tcpdump
                 termdown
+                trickle
                 unison
                 unar
                 unzip
                 usbutils
                 vmtouch
+                vorbisTools
                 wget
                 whois
                 wirelesstools
@@ -148,8 +153,8 @@ nixos : {
                 avrlibc
                 cabal2nix
                 coq
+                doxygen
                 emscripten
-                emscriptenPackages.libxml2
                 emscriptenPackages.zlib
                 ghc-env
                 ghostscript
@@ -179,12 +184,14 @@ nixos : {
                 audacity
                 bb
                 beets
+                blender
                 chirp
                 chocolateDoom
                 claws-mail
                 compton-git
                 disk_indicator
                 dwarf-fortress
+                easytag
                 endless-sky
                 feh
                 firefox
@@ -221,9 +228,10 @@ nixos : {
                 sonata
                 syncthing
                 tiled
-                torbrowser
+                # torbrowser
                 trayer
                 unclutter
+                virtmanager
                 wine
                 wireshark
                 xclip

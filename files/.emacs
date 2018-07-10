@@ -50,6 +50,7 @@
  '(c-default-style "linux")
  '(c-basic-offset 4)
  '(c-offsets-alist (quote ((case-label . 2))))
+ '(c-set-offset (quote cpp-macro) 0 nil)
  '(calc-highlight-selections-with-faces t)
  '(calendar-mark-diary-entries-flag t)
  '(calendar-week-start-day 1)

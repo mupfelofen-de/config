@@ -45,7 +45,11 @@ chpwd() {
         echo
         ls -d
         ls
-        echo
+        if [ -f .todo ]; then
+            echo
+            todo
+            echo
+        fi
     fi
 }
 
