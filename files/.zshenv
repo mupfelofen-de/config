@@ -12,7 +12,8 @@ export EMAIL="Michael Fitzmayer <mail@michael-fitzmayer.de>"
 export LANG=en_GB.UTF-8
 export LC_COLLATE=POSIX
 export LC_CTYPE=de_DE.UTF-8
-export LESS="-iMR -j2 -x2 -z-4 --shift=2 -PM ?f%f:<pipe>. ?e(EOF) .?m(%i/%m) .[%Pt\% %lt/%L] [%c] [%pt\% %bt/%B] ?x-> %x ."
+export LESS="-iMR -j2 -x2 -z-4 --shift=2 -PM ?f%f:<pipe>. ?e(EOF) .?m(%i/%m) .[%Pt\% %lt/%L] [%c] [%pt\% %bt/%B] ?x-> %x . "
+export LESSOPEN="| src-hilite-lesspipe.sh %s"
 export MPD_HOST=~/.mpd/socket
 export NCURSES_ASSUMED_COLORS="7,-1"
 export NIX_PAGER="cat"

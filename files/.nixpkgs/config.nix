@@ -125,6 +125,7 @@ nixos : {
                 s6
                 screen
                 smartmontools
+	              sourceHighlight
                 speedtest-cli
                 sqlite
                 sshfsFuse
