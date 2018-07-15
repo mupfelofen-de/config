@@ -115,7 +115,7 @@ nixos : {
                 patchelf
                 pciutils
                 posix_man_pages
-                postgresql100
+                # postgresql100
                 rfkill
                 psmisc
                 pv
@@ -127,7 +127,7 @@ nixos : {
                 smartmontools
 	              sourceHighlight
                 speedtest-cli
-                sqlite
+                # sqlite
                 sshfsFuse
                 tcpdump
                 termdown
@@ -145,18 +145,25 @@ nixos : {
             ];
         };
 
-        ertes-dev = super.buildEnv {
-            name = "ertes-dev";
+        ertes-avr = super.buildEnv {
+            name = "ertes-avr";
             paths = with self; [
                 avrbinutils
                 avrdude
                 avrgcc
                 avrlibc
+            ];
+        };
+
+        ertes-dev = super.buildEnv {
+            name = "ertes-dev";
+            paths = with self; [
                 cabal2nix
                 coq
                 doxygen
                 emscripten
                 emscriptenPackages.zlib
+                gdb
                 ghc-env
                 ghostscript
                 gnuplot
@@ -208,9 +215,11 @@ nixos : {
                 i3lock
                 inkscape
                 keepassx
+                kicad
                 kid3
                 krita
                 ledger
+                librecad
                 mpc_cli
                 mpd
                 mpv
@@ -233,6 +242,7 @@ nixos : {
                 trayer
                 unclutter
                 virtmanager
+                virt-viewer
                 wine
                 wireshark
                 xclip
@@ -286,7 +296,7 @@ nixos : {
             mwc-random
             network
             pipes
-            postgresql-simple
+            # postgresql-simple
             progress-meter
             QuickCheck
             random
@@ -296,7 +306,7 @@ nixos : {
             resourcet
             scotty
             sdl2
-            sqlite-simple
+            # sqlite-simple
             stm
             streams
             text
