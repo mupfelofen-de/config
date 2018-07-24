@@ -53,6 +53,7 @@ nixos : {
             name = "ertes-base";
             paths = with self; [
                 aircrack-ng
+                bchunk
                 bedup
                 btrbk
                 cacert
@@ -159,6 +160,7 @@ nixos : {
             name = "ertes-dev";
             paths = with self; [
                 cabal2nix
+                cmake
                 coq
                 doxygen
                 emscripten
@@ -167,6 +169,7 @@ nixos : {
                 ghc-env
                 ghostscript
                 gnuplot
+                libsndfile
                 libxml2
                 maxima
                 nix-prefetch-git
@@ -198,6 +201,7 @@ nixos : {
                 claws-mail
                 compton-git
                 disk_indicator
+                dosbox
                 dwarf-fortress
                 easytag
                 endless-sky
@@ -244,6 +248,7 @@ nixos : {
                 virtmanager
                 virt-viewer
                 wine
+                winetricks
                 wireshark
                 xclip
                 xlibs.xbacklight
