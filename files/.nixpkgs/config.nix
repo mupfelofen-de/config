@@ -108,6 +108,7 @@ nixos : {
                 minicom
                 mkpasswd
                 mpg123
+                mtools
                 nix-repl
                 nmap
                 notmuch
@@ -224,6 +225,7 @@ nixos : {
                 krita
                 ledger
                 librecad
+                libreoffice
                 mpc_cli
                 mpd
                 mpv
