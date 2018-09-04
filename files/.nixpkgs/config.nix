@@ -98,6 +98,7 @@ nixos : {
                 iotop
                 isync
                 iw
+                jmtpfs
                 jq
                 lame
                 lftp
@@ -173,11 +174,13 @@ nixos : {
                 libsndfile
                 libxml2
                 maxima
+                nasm
                 nix-prefetch-git
                 pandoc
                 pkgconfig
                 pypi2nix
                 python3-env
+                retdec
                 SDL2
                 SDL2_gfx
                 SDL2_image
@@ -226,6 +229,7 @@ nixos : {
                 ledger
                 librecad
                 libreoffice
+                linux-steam-integration
                 mpc_cli
                 mpd
                 mpv
