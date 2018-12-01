@@ -110,13 +110,14 @@ nixos : {
                 mkpasswd
                 mpg123
                 mtools
-                nix-repl
+                # nix-repl
                 nmap
                 notmuch
                 p7zip
                 pari
                 patchelf
                 pciutils
+               	plover
                 posix_man_pages
                 # postgresql100
                 rfkill
@@ -148,16 +149,6 @@ nixos : {
             ];
         };
 
-        ertes-avr = super.buildEnv {
-            name = "ertes-avr";
-            paths = with self; [
-                avrbinutils
-                avrdude
-                avrgcc
-                avrlibc
-            ];
-        };
-
         ertes-dev = super.buildEnv {
             name = "ertes-dev";
             paths = with self; [
@@ -177,6 +168,7 @@ nixos : {
                 nasm
                 nix-prefetch-git
                 pandoc
+                #platformio
                 pkgconfig
                 pypi2nix
                 python3-env
@@ -204,6 +196,7 @@ nixos : {
                 chocolateDoom
                 claws-mail
                 compton-git
+                crrcsim
                 disk_indicator
                 dosbox
                 dwarf-fortress
@@ -211,6 +204,7 @@ nixos : {
                 endless-sky
                 feh
                 firefox
+                flightgear
                 ffmpeg
                 gajim
                 geeqie
@@ -220,11 +214,14 @@ nixos : {
                 gucharmap
                 # haskellPackages.myxmonad
                 # haskellPackages.xmobar
+                heimdall-gui
                 i3lock
                 inkscape
+                kdeconnect
                 keepassx
                 kicad
                 kid3
+                krename
                 krita
                 ledger
                 librecad
@@ -237,6 +234,7 @@ nixos : {
                 notify-desktop
                 openmw
                 pavucontrol
+                pidgin-with-plugins
                 ppsspp
                 redshift
                 rxvt_unicode
