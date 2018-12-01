@@ -501,6 +501,7 @@ Erstellt: %U" :prepend t))))
 (add-to-list 'auto-mode-alist '("\.xml$" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\.xsl$" . nxml-mode))
 
+(global-set-key (kbd "<f8>") 'compile)
 (global-set-key (kbd "<f11>") 'ertes-invert-colours)
 (global-set-key (kbd "<f12>") 'ertes-toggle-transparency)
 (global-set-key (kbd "C-c c") 'compile)
@@ -526,6 +527,8 @@ Erstellt: %U" :prepend t))))
 
 (setq vc-handled-backends nil)
 (yas-global-mode 1)
+
+(setq default-frame-alist '((cursor-color . "white")))
 
 ;(with-demoted-errors "Unable to load ERC: %S"
 ;  (load "~/.emacs.d/my-erc"))

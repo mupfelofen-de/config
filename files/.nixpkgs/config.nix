@@ -110,14 +110,13 @@ nixos : {
                 mkpasswd
                 mpg123
                 mtools
-                # nix-repl
                 nmap
-                notmuch
+                #notmuch
                 p7zip
                 pari
                 patchelf
                 pciutils
-               	plover
+               	plover.stable
                 posix_man_pages
                 # postgresql100
                 rfkill
@@ -156,8 +155,8 @@ nixos : {
                 cmake
                 coq
                 doxygen
-                emscripten
-                emscriptenPackages.zlib
+                #emscripten
+                #emscriptenPackages.zlib
                 gdb
                 ghc-env
                 ghostscript
@@ -168,7 +167,7 @@ nixos : {
                 nasm
                 nix-prefetch-git
                 pandoc
-                #platformio
+                platformio
                 pkgconfig
                 pypi2nix
                 python3-env
@@ -204,7 +203,6 @@ nixos : {
                 endless-sky
                 feh
                 firefox
-                flightgear
                 ffmpeg
                 gajim
                 geeqie
@@ -226,7 +224,6 @@ nixos : {
                 ledger
                 librecad
                 libreoffice
-                linux-steam-integration
                 mpc_cli
                 mpd
                 mpv
@@ -306,15 +303,15 @@ nixos : {
             network
             pipes
             # postgresql-simple
-            progress-meter
+            # progress-meter
             QuickCheck
             random
-            rapid
-            rapid-term
+            # rapid
+            # rapid-term
             # reflex
             resourcet
             scotty
-            sdl2
+            # sdl2
             # sqlite-simple
             stm
             streams
