@@ -2,7 +2,7 @@
 
 !== Extensions ==!
 URxvt.perl-ext-common: fullscreen
-URxvt.keysym.F11:      perl:fullscreen:switch
+!URxvt.keysym.F11:      perl:fullscreen:switch
 
 !== Geometries ==!
 emacs.geometry:        100x40
