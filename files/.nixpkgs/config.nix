@@ -234,10 +234,12 @@ nixos : {
                 pidgin-with-plugins
                 ppsspp
                 redshift
+                rofi
                 rxvt_unicode
                 sc-controller
                 scrot
                 scummvm
+                skippy-xd
                 stalonetray
                 steam-run
                 sonata
