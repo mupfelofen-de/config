@@ -204,6 +204,7 @@ nixos : {
                 feh
                 firefox
                 ffmpeg
+                fritzing
                 gajim
                 geeqie
                 gimp
