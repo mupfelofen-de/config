@@ -57,7 +57,6 @@ nixos : {
                 bedup
                 btrbk
                 cacert
-                cloc
                 connect
                 curl
                 darcs
@@ -153,6 +152,7 @@ nixos : {
             name = "ertes-dev";
             paths = with self; [
                 cabal2nix
+                cloc
                 cmake
                 coq
                 doxygen
