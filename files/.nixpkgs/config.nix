@@ -57,6 +57,7 @@ nixos : {
                 bedup
                 btrbk
                 cacert
+                cloc
                 connect
                 curl
                 darcs
