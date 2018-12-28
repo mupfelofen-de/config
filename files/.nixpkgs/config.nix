@@ -172,12 +172,7 @@ nixos : {
                 pypi2nix
                 python3-env
                 retdec
-                SDL2
-                SDL2_gfx
-                SDL2_image
-                SDL2_mixer
-                SDL2_net
-                SDL2_ttf
+                swig
                 texlive.combined.scheme-basic
                 zlib
             ];
