@@ -86,6 +86,7 @@ nixos : {
                 fdupes
                 file
                 fortune
+                fzf
                 gcc
                 gitAndTools.gitFull
                 gitAndTools.hub
@@ -151,6 +152,9 @@ nixos : {
         ertes-dev = super.buildEnv {
             name = "ertes-dev";
             paths = with self; [
+                android-studio
+                bat
+                bench
                 cabal2nix
                 cloc
                 cmake
@@ -158,6 +162,7 @@ nixos : {
                 doxygen
                 #emscripten
                 #emscriptenPackages.zlib
+                #emscriptenPackages.libxml2
                 gdb
                 ghc-env
                 ghostscript
