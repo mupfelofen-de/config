@@ -152,10 +152,11 @@ nixos : {
         ertes-dev = super.buildEnv {
             name = "ertes-dev";
             paths = with self; [
-                android-studio
+                androidStudioPackages.beta
                 bat
                 bench
                 cabal2nix
+                clang-tools
                 cloc
                 cmake
                 coq
@@ -164,8 +165,9 @@ nixos : {
                 #emscriptenPackages.zlib
                 #emscriptenPackages.libxml2
                 gdb
-                ghc-env
+                #ghc-env
                 ghostscript
+                global
                 gnuplot
                 libsndfile
                 libxml2
@@ -180,6 +182,7 @@ nixos : {
                 retdec
                 swig
                 texlive.combined.scheme-basic
+                valgrind
                 zlib
             ];
         };
@@ -187,7 +190,7 @@ nixos : {
         ertes-gui = super.buildEnv {
             name = "ertes-gui";
             paths = with self; [
-                arx-libertatis
+                #arx-libertatis
                 audacity
                 bb
                 beets
@@ -231,7 +234,8 @@ nixos : {
                 mpv
                 ncmpc
                 notify-desktop
-                openmw
+                # openmw
+                openmw-tes3mp
                 pavucontrol
                 pidgin-with-plugins
                 ppsspp
@@ -243,7 +247,7 @@ nixos : {
                 scummvm
                 skippy-xd
                 stalonetray
-                steam-run
+                steam-run-native
                 sonata
                 syncthing
                 tiled
@@ -252,8 +256,8 @@ nixos : {
                 unclutter
                 virtmanager
                 virt-viewer
-                wine
-                winetricks
+                # wine-staging
+                # winetricks
                 wireshark
                 xclip
                 xlibs.xbacklight

@@ -30,6 +30,7 @@
 (load "ertes-paredit")
 (load "ertes-python")
 (load "ertes-time")
+(load "ggtags")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -388,8 +389,10 @@ Erstellt: %U" :prepend t))))
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa-stable" . "http://stable.melpa.org/packages/"))))
- '(package-selected-packages (quote (platformio-mode haskell-mode ##)))
+     ("melpa" . "http://melpa.org/packages/"))))
+ '(package-selected-packages
+   (quote
+    (clang-format list-packages-ext platformio-mode haskell-mode ##)))
  '(pc-select-override-scroll-error t)
  '(pc-select-selection-keys-only t)
  '(pc-selection-mode t)
@@ -431,7 +434,6 @@ Erstellt: %U" :prepend t))))
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;; '(default ((t (:inherit nil :stipple nil :background "#450066" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(default ((t (:inherit nil :stipple nil :background "#192627" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
  '(agda2-highlight-function-face ((t (:foreground "cyan"))))
  '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
@@ -495,6 +497,13 @@ Erstellt: %U" :prepend t))))
 (yas-global-mode 1)
 
 (setq default-frame-alist '((cursor-color . "white")))
+
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+              (ggtags-mode 1))))
+
+(add-to-list 'default-frame-alist '(fullscreen . fullboth))
 
 ;(with-demoted-errors "Unable to load ERC: %S"
 ;  (load "~/.emacs.d/my-erc"))
