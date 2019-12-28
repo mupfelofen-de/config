@@ -104,6 +104,7 @@ nixos : {
                 lame
                 lftp
                 libressl
+                libusb
                 llvm
                 lm_sensors
                 manpages
@@ -134,6 +135,7 @@ nixos : {
                 # sqlite
                 sshfsFuse
                 tcpdump
+                telnet
                 termdown
                 trickle
                 unison
@@ -143,7 +145,6 @@ nixos : {
                 vmtouch
                 vorbisTools
                 wget
-                whois
                 wirelesstools
                 zip
             ];
@@ -153,33 +154,39 @@ nixos : {
             name = "ertes-dev";
             paths = with self; [
                 androidStudioPackages.beta
+                gcc-arm-embedded-7
                 bat
                 bench
                 cabal2nix
+                cargo
                 clang-tools
                 cloc
                 cmake
+                cppcheck
                 coq
                 doxygen
                 #emscripten
                 #emscriptenPackages.zlib
                 #emscriptenPackages.libxml2
+                esptool
                 gdb
                 #ghc-env
                 ghostscript
                 global
                 gnuplot
+                graphviz
                 libsndfile
                 libxml2
                 maxima
                 nasm
                 nix-prefetch-git
                 pandoc
-                platformio
                 pkgconfig
-                pypi2nix
-                python3-env
+                platformio
+                #pypi2nix
+                #python3-env
                 retdec
+                rustc
                 swig
                 texlive.combined.scheme-basic
                 valgrind
@@ -202,6 +209,7 @@ nixos : {
                 crrcsim
                 disk_indicator
                 dosbox
+                dsview
                 dwarf-fortress
                 easytag
                 endless-sky
@@ -217,9 +225,9 @@ nixos : {
                 gucharmap
                 # haskellPackages.myxmonad
                 # haskellPackages.xmobar
-                heimdall-gui
                 i3lock
                 inkscape
+                jre
                 kdeconnect
                 keepassx
                 kicad
@@ -229,16 +237,20 @@ nixos : {
                 ledger
                 librecad
                 libreoffice
+                masterpdfeditor
                 mpc_cli
                 mpd
                 mpv
                 ncmpc
                 notify-desktop
-                # openmw
-                openmw-tes3mp
+                openmw
+                # openmw-tes3mp
                 pavucontrol
                 pidgin-with-plugins
                 ppsspp
+                pulseview
+                putty
+                qucs
                 redshift
                 rofi
                 rxvt_unicode
