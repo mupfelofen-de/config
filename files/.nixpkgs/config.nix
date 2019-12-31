@@ -94,6 +94,7 @@ nixos : {
                 gnupg
                 gptfdisk
                 graphicsmagick
+                home-manager
                 htmlTidy
                 imagemagick
                 iotop
@@ -184,9 +185,10 @@ nixos : {
                 pkgconfig
                 platformio
                 #pypi2nix
-                #python3-env
+                python3
                 retdec
                 rustc
+                rtags
                 swig
                 texlive.combined.scheme-basic
                 valgrind
@@ -197,7 +199,7 @@ nixos : {
         ertes-gui = super.buildEnv {
             name = "ertes-gui";
             paths = with self; [
-                #arx-libertatis
+                arx-libertatis
                 audacity
                 bb
                 beets
@@ -268,8 +270,8 @@ nixos : {
                 unclutter
                 virtmanager
                 virt-viewer
-                # wine-staging
-                # winetricks
+                wine-staging
+                winetricks
                 wireshark
                 xclip
                 xlibs.xbacklight
@@ -348,9 +350,9 @@ nixos : {
             vector
         ]);
 
-        python3-env = super.python3.withPackages (p: with p; [
-            pyrsistent
-            requests
-        ]);
+        #python3-env = super.python3.withPackages (p: with p; [
+        #    pyrsistent
+        #    requests
+        #]);
     };
 }
