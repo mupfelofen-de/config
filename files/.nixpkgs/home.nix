@@ -34,6 +34,8 @@ in
     # Connectivity/Networking
     aircrack-ng
     connect
+    dfu-util
+    httplz
     nmap
     putty
     lftp
@@ -78,6 +80,7 @@ in
     darcs
     doxygen
     dsview
+    eclipses.eclipse-cpp
     emacs
     emacsPackages.darcsum
     emacsPackages.org
@@ -106,23 +109,29 @@ in
     global
     gnumake
     graphviz
-    kicad
+	  # kicad-with-packages3d
     nasm
+    openocd
     pandoc
     pkgconfig
     platformio
     python3
     qucs
-    retdec
+    qtcreator
+    # retdec
     rtags
     rustc
+    stlink
     swig
     tiled
     valgrind
+    vscode-with-extensions
 
     # Games/Demos
+	  _2048-in-terminal
     arx-libertatis
     bb
+	  cataclysm-dda-git
     chocolateDoom
     dosbox
     dwarf-fortress
@@ -133,6 +142,7 @@ in
     scummvm
 
     # Graphics
+    aseprite
     blender
     geeqie
     gimp
@@ -179,7 +189,7 @@ in
     jmtpfs
     jq
     jre
-    llvm
+    # llvm
     lm_sensors
     manpages
     mkpasswd
@@ -196,6 +206,7 @@ in
     redshift
     renameutils
     rfkill
+    ruby
     rss2email
     s6
     smartmontools

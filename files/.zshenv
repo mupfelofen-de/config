@@ -34,6 +34,8 @@ path+=(~/cfg/my/bin)
 
 path=(${path:#/home/micha/bin})
 path+=(~/bin)
+path+=(~/bin/can-utils)
+path+=(~/.gem/ruby/2.6.0/bin)
 
 manpath=(
     /run/current-system/sw/share/man

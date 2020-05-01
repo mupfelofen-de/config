@@ -4,14 +4,16 @@
 (add-to-list 'load-path "~/.nix-profile/share/x86_64-linux-ghc-8.0.2/Agda-2.5.2/emacs-mode")
 (add-to-list 'load-path "~/.nix-profile/share/emacs/site-lisp")
 
-;(setq package-user-dir "~/.nix-profile/share/emacs/site-lisp/elpa")
+(setq package-user-dir "~/.nix-profile/share/emacs/site-lisp/elpa")
 (setq package-user-dir "~/.emacs.d/elpa")
 (package-initialize)
 
-(load "ProofGeneral/generic/proof-site")
+;(load "ProofGeneral/generic/proof-site")
 
+(require 'acme-mode)
 (require 'agda2 nil t)
 (require 'calc)
+(require 'cmake-mode)
 (require 'dired-x)
 (require 'ibuf-ext)
 (require 'imaxima nil t)
@@ -52,7 +54,7 @@
  '(browse-url-firefox-program "palemoon")
  '(c-basic-offset 4)
  '(c-default-style "linux")
- '(c-offsets-alist (quote ((case-label . 2))))
+ '(c-offsets-alist (quote ((case-label . 4))))
  '(c-set-offset (quote cpp-macro) t)
  '(calc-highlight-selections-with-faces t)
  '(calendar-mark-diary-entries-flag t)
@@ -392,7 +394,7 @@ Erstellt: %U" :prepend t))))
      ("melpa" . "http://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (clang-format list-packages-ext platformio-mode haskell-mode ##)))
+    (flymake cmake-mode clang-format list-packages-ext platformio-mode haskell-mode ##)))
  '(pc-select-override-scroll-error t)
  '(pc-select-selection-keys-only t)
  '(pc-selection-mode t)
@@ -435,7 +437,6 @@ Erstellt: %U" :prepend t))))
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :background "#192627" :foreground "gray" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 150 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
- '(agda2-highlight-function-face ((t (:foreground "cyan"))))
  '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
  '(agda2-highlight-primitive-face ((t (:foreground "cyan"))))
  '(agda2-highlight-primitive-type-face ((t (:foreground "cyan"))))
@@ -463,6 +464,7 @@ Erstellt: %U" :prepend t))))
 
 (add-hook 'find-file-hook 'capitalized-words-mode)
 
+(add-to-list 'auto-mode-alist '("\.s$" . acme-mode))
 (add-to-list 'auto-mode-alist '("\.html$" . nxml-mode))
 (add-to-list 'auto-mode-alist '("\.jq$" . jq-mode))
 (add-to-list 'auto-mode-alist '("\.nix$" . nix-mode))
@@ -504,6 +506,11 @@ Erstellt: %U" :prepend t))))
               (ggtags-mode 1))))
 
 (add-to-list 'default-frame-alist '(fullscreen . fullboth))
+
+(setq auto-mode-alist
+      (append '(("CMakeLists\\.txt\\'" . cmake-mode)
+                ("\\.cmake\\'" . cmake-mode))
+              auto-mode-alist))
 
 ;(with-demoted-errors "Unable to load ERC: %S"
 ;  (load "~/.emacs.d/my-erc"))
